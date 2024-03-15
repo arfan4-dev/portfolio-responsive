@@ -41,7 +41,7 @@ const Section = () => {
                 <div >
                     <img src="/assets/oval.svg" alt="" className='w-[380px]' />
                 </div>
-                <img src="/assets/Bitmap (19).png" alt="" className='absolute -top-28 right-56 w-[276px]' />
+                <img src="/assets/CompositeLayer (8).png" alt="" className='absolute -top-28 right-56 w-[276px]' />
                 <img src="/assets/ovalStar.svg" alt="" className='absolute -top-10 right-12 w-[112px]' />
                 <img src="/assets/idean.svg" alt="" className='absolute top-2 -right-24 w-[112px]' />
                 <img src="/assets/Bitmap (19).png" alt="" className='absolute top-32 -right-28 w-[246px]' />

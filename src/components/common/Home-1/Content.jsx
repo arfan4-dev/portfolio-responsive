@@ -3,7 +3,7 @@ import React from 'react'
 
 const Content = () => {
     return (
-        <div className='bg-[#FDF0E9] h-[100%] w-[132%] py-10'>
+        <div className='bg-[#FDF0E9] h-[100%] w-[132%] lg:w-full py-10'>
             <div className='grid grid-cols-2 grid-rows-2 justify-items-center place-items-center gap-10 lg:flex lg:items-center lg:justify-around'>
                 <img src="/assets/sign1.png" alt="" className='w-[147px]' />
                 <img src="/assets/sign2.png" alt="" className='w-[108px]' />
@@ -14,20 +14,20 @@ const Content = () => {
             <div className='flex items-center justify-center lg:hidden mt-10'>
                 <img src="/assets/sign5.png" alt="" className='w-[126px] ' />
             </div>
-            {/* <p className='w-[20px] text-[black]' ></p> */}
+            {/* <p className='w-[200px] h-[1px] text-black' ></p> */}
 
-            <div className='flex flex-col items-center lg:flex-row relative justify-center lg:space-x-28 mt-72 '>
-                <div className='lg:mt-16 ' >
-                    <img src="/assets/Bitmap.png" alt="" className='relative w-[350px] lg:w-[470px] ml-24 -mt-12 lg:mt-0 lg:ml-0 lg:z-[1200px]' style={{ zIndex: '1' }} />
-                    <img src="/assets/Rectangle.svg" alt="" className='w-[310px] lg:w-[384px] absolute -top-40 left-24 lg:-top-20 lg:left-60 opacity-100' />
-                    <img src="/assets/Path.svg" alt="" className='w-[150px] lg:w-[193px] absolute -top-28 left-14 lg:-top-10 lg:left-44' />
-                    <img src="/assets/block.png" alt="" className='w-[236px] absolute -top-36 left-[250px]  lg:-top-10 lg:left-[480px] ' style={{ zIndex: '1 ' }} />
-                    <img src="/assets/Combined Shape (1).svg" alt="" className='w-[130px] lg:w-[193px] absolute -top-40 left-[340px]  lg:-top-20 lg:left-[550px]' />
-                    <img src="/assets/CompositeLayer.png" alt="" className='w-[160px] lg:w-[219px] absolute bottom-[470px] left-[40px] lg:-bottom-28 lg:left-[170px]' style={{ zIndex: '1' }} />
+            <div className='flex flex-col items-center lg:flex-row relative justify-center  xl:space-x-28 mt-40 2xl:mt-72 '>
+                <div className='2xl:mt-16 ' >
+                    <img src="/assets/Bitmap.png" alt="" className='relative w-[350px] xl:w-[320px] 2xl:w-[470px] ml-24 xl:-ml-16 2xl:ml-24 xl:-mt-32 2xl:-mt-12 lg:mt-0 lg:ml-0 ' style={{ zIndex: '1' }} />
+                    <img src="/assets/Rectangle.svg" alt="" className='w-[310px] xl:w-[250px] 2xl:w-[384px] absolute -top-40 left-24 xl:-top-10 xl:left-44 2xl:-top-20 2xl:left-60 opacity-100' />
+                    <img src="/assets/Path.svg" alt="" className='w-[150px] xl:w-[100px] 2xl:w-[193px] absolute -top-28 left-14 xl:top-10 xl:left-36 2xl:-top-10 2xl:left-44' />
+                    <img src="/assets/block.png" alt="" className='w-[236px] xl:w-[200px] 2xl:w-[236px] absolute -top-36 left-[250px] xl:-top-10 xl:left-[290px]  2xl:-top-10 2xl:left-[480px] ' style={{ zIndex: '1 ' }} />
+                    <img src="/assets/Combined Shape (1).svg" alt="" className='w-[130px] xl:w-[130px] 2xl:w-[193px] absolute -top-40 left-[340px]  xl:-top-[60px] xl:left-[360px]  2xl:-top-20 2xl:left-[550px]' />
+                    <img src="/assets/CompositeLayer.png" alt="" className='w-[160px] xl:w-[120px] 2xl:w-[219px] absolute bottom-[470px] left-[40px] xl:bottom-32 xl:left-[170px] 2xl:-bottom-28 2xl:left-[170px]' style={{ zIndex: '1' }} />
 
                 </div>
 
-                <div className='text-[#391400] mt-40 lg:mt-20 '>
+                <div className='text-[#391400] mt-40 xl:mt-0 2xl:mt-20 '>
                     <p className='text-[#EF6D58] text-[16px]'>About</p>
                     <p className='text-[40px] lg:text-[56px]'>An Experience </p>
                     <p className='text-[56px]'>Design Agency</p>
@@ -144,7 +144,7 @@ const Content = () => {
 
                 </div>
 
-            </div>
+            </div> {/**/}
 
 
 
@@ -173,7 +173,7 @@ const Content = () => {
 
             </div>
 
-            <div className='flex flex-col lg:flex-row items-center justify-around mt-40'>
+            <div className='flex flex-col lg:flex-row items-center justify-around mt-40 xl:mt-24 2xl:mt-40'>
 
                 <div className='relative'>
                     <img src="/assets/Triangle.png" alt="" className='w-[430px] lg:w-[551px] relative' />
@@ -217,13 +217,13 @@ const Content = () => {
 
                 </div>
 
-            </div>
+            </div>  {/**/}
 
 
 
 
             <div className='text-[40px] text-[#391400]'>
-                <div className='ml-12 mt-20 lg:ml-[180px] mb-10'>
+                <div className='ml-12 mt-20 xl:ml-[90px] 2xl:ml-[180px] mb-10'>
                     <p className='text-[16px] text-[#EF6D58]'>Service</p>
                     <p> Can Help</p>
                     <p>How Our Agency</p>
@@ -266,7 +266,7 @@ const Content = () => {
 
                     </div>
                 </div>
-            </div>
+            </div>{/*  */}
 
 
             <div className='bg-[#28293E] '>
@@ -288,27 +288,29 @@ const Content = () => {
 
                 </div>
 
-                <div className='flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-x-8 relative'>
+                <div className='flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-y-0 lg:space-x-8 relative'>
                     <img src="/assets/Bitmap (3).png" alt="" className=' w-[420px] lg:w-[470px] h-[416px] ' />
-                    <div className='absolute top-[230px] left-14  lg:bottom-10 lg:left-48'>
+                    <div className='absolute top-[260px] left-14  xl:top-72 xl:left-20 2xl:bottom-10 2xl:left-48'>
                         <button className='bg-[#ffff] text-[#391400] text-[16px] px-4 py-2 rounded-full'>Design</button>
                         <p className='text-[#ffff] text-[40px]'>SOFA</p>
                     </div>
-                    <img src="/assets/Bitmap (4).png" alt="" className='w-[420px] lg:w-[670px] h-[416px]' />
-                    <div className='absolute bottom-10 left-14 lg:right-[630px]'>
+                    <img src="/assets/Bitmap (4).png" alt="" className=' w-[420px] lg:w-[670px] h-[416px]' />
+                    <div className='absolute top-[700px] left-14  xl:top-72 xl:left-[580px] 2xl:bottom-10 2xl:left-[700px]'>
                         <button className='bg-[#ffff] text-[#391400] text-[16px] px-4 py-2 rounded-full'>Branding</button>
                         <p className='text-[#ffff] text-[40px]'>KeyBoard</p>
                     </div>
                 </div>
 
-                <div className='flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-x-8 mt-8 relative'>
+                <div className='flex flex-col lg:flex-row justify-center items-center space-y-6 lg:space-y-0 lg:space-x-8 mt-8 relative'>
                     <img src="/assets/Bitmap (5).png" alt="" className='w-[420px] lg:w-[670px] h-[416px]' />
-                    <div className='absolute top-[230px] left-14  lg:bottom-10 lg:left-48'>
+
+                    <div className='absolute top-[260px] left-14  xl:top-72 xl:left-20 2xl:bottom-10 2xl:left-48'>
                         <button className='bg-[#ffff] text-[#391400] text-[16px] px-4 py-2 rounded-full'>Illustration</button>
                         <p className='text-[#ffff] text-[40px]'>Work Media</p>
                     </div>
                     <img src="/assets/Bitmap (6).png" alt="" className='w-[420px] lg:w-[470px] h-[416px]' />
-                    <div className='absolute bottom-[50px] left-14 lg:bottom-10 lg:right-[450px]'>
+
+                    <div className='absolute top-[700px] left-14  xl:top-72 xl:left-[780px] 2xl:bottom-10 2xl:left-[900px]'>
                         <button className='bg-[#ffff] text-[#391400] text-[16px] px-4 py-2 rounded-full'>Motion</button>
                         <p className='text-[#ffff] text-[40px]'>DDDone</p>
                     </div>
@@ -322,10 +324,10 @@ const Content = () => {
                 </div>
 
 
-                <div className='relative h-[860px] w-[336px] lg:w-[1170px] lg:h-[336px] bg-[#FDF0E9] rounded-lg mx-auto mt-32 ' >
+                <div className='relative h-[860px] w-[336px] lg:w-[1170px] xl:h-[300px] 2xl:h-[336px] bg-[#FDF0E9] rounded-lg mx-auto mt-32 ' >
                     <img src="/assets/icon.png" className='w-[147px]  absolute -top-[80px] left-5' alt="" />
 
-                    <div className='flex flex-col lg:flex-row justify-center space-y-24 lg:space-x-20 items-center py-16'>
+                    <div className='flex flex-col lg:flex-row justify-center space-y-24 lg:space-y-0  lg:space-x-20 items-center py-16 xl:py-10 2xl:py-16'>
 
                         <div className='text-[24px] text-[#391400]'>
                             <p className='text-[#EF6D58] text-[16px]'>Get Started</p>
@@ -340,8 +342,8 @@ const Content = () => {
                             <img src="/assets/block (2).png" alt="" className='w-[338px] h-[176px]' />
                         </div>
                         <div className='relative'>
-                            <img src="/assets/Path (1).png" className='w-[230px] lg:w-[282px] h-[242px] ' alt="" />
-                            <img src="/assets/Bitmap (7).png" className='w-[210px] h-[350px] lg:w-[239px] lg:h-[396px] absolute -top-[90px] -right-5 lg:-top-[120px] lg:-right-3 ' alt="" />
+                            <img src="/assets/Path (1).png" className='w-[230px] h-[242px] xl:w-[190px] xl:h-[232px] 2xl:w-[282px] 2xl:h-[242px] ' alt="" />
+                            <img src="/assets/Bitmap (7).png" className='w-[210px] h-[350px] 2xl:w-[239px] 2xl:h-[396px] absolute -top-[90px] -right-5 lg:-top-[90px] lg:-right-3  2xl:-top-[120px] 2xl:-right-3' alt="" />
                         </div>
 
                     </div>
@@ -418,11 +420,11 @@ const Content = () => {
                     <button className='bg-[#28293E] border-1 border-[#ffff] text-[#fff] rounded-sm px-10 py-3 mt-5 '>
                         Explore More
                     </button>
-                </div>
-                {/*
+                </div> {/**/}
 
 
-                <div className='flex items-end justify-between ml-44 mr-44 mt-32'>
+
+                {/* <div className='flex items-end justify-between ml-44 mr-44 mt-32'>
 
                     <div>
                         <p className='text-[#EF6D58] text-[16px]'>Our Team</p>
@@ -442,7 +444,7 @@ const Content = () => {
 
 
 
-                {/* <div className='flex items-center justify-center space-x-9 mt-20'>
+                {/*<div className='flex items-center justify-center space-x-9 mt-20'>
                     <div>
                         <div className='border-1 border-[#3A3C56] w-[270px] h-[272px]'>
                             <figure className='flex flex-col items-center justify-end'>
@@ -485,12 +487,12 @@ const Content = () => {
                     </div>
 
 
-                </div> */}
+                </div>  */}
 
 
                 <div className='flex items-center justify-center mt-20'>
                     <img src="/assets/pins.png" className='w-[76px]' alt="" />
-                </div>
+                </div> {/**/}
 
 
 
@@ -505,7 +507,7 @@ const Content = () => {
                         <p>Founder</p>
                     </div>
                 </div>
-
+                {/**/}
             </div>
 
             <div className='flex flex-col justify-center items-center mt-28 '>
@@ -625,14 +627,14 @@ const Content = () => {
                 </div>
 
 
-            </div>
+            </div>{/* */}
 
 
             <div className='flex items-center justify-center mt-14'>
                 <button className='bg-[#ffff]  border-1 border-[#ffff] rounded-sm w-[138px] p-3 mt-5 '>
                     See All
                 </button>
-            </div>
+            </div>  {/**/}
 
 
 
@@ -772,31 +774,31 @@ const Content = () => {
 
                 <div className='mx-48 mt-20 space-y-7'>
 
-                    <div className='flex flex-col lg:flex-row items-center space-y-5 lg:space-y-0 justify-between '>
-                        <div className='flex flex-col lg:flex-row items-center space-y-5 lg:space-x-5'>
+                    <div className='flex flex-col lg:flex-row items-center space-y-5 lg:space-y-0 justify-between  '>
+                        <div className='flex flex-col lg:flex-row items-center space-y-5 lg:space-y-0  lg:space-x-5'>
                             <img src="/assets/Bitmap (13).png " className='w-[120px]' alt="" />
-                            <p className='text-[20px] text-[#391400]'>SOFA</p>
+                            <p className='text-[16px] lg:text-[20px] text-[#391400]'>SOFA</p>
                         </div>
-                        <div>
-                            <p className='text-[16px]'>25 Oct, 2021</p>
+                        <div className=''>
+                            <p className='text-[12px] lg:text-[16px]'>25 Oct, 2021</p>
                         </div>
 
-                        <div className='flex flex-col lg:flex-row  items-center  space-y-5 lg:space-x-5'>
+                        <div className='flex flex-col lg:flex-row  items-center  space-y-5 lg:space-y-0 lg:space-x-5'>
                             <p>Awwwards</p>
                             <img src="/assets/Bitmap (14).png" className='w-[48px]' alt="" />
                         </div>
                     </div>
 
                     <div className='flex flex-col lg:flex-row items-center justify-between  space-y-5 lg:space-y-0 '>
-                        <div className='flex flex-col lg:flex-row items-center  space-y-5 lg:space-x-5'>
+                        <div className='flex flex-col lg:flex-row items-center  space-y-5 lg:space-y-0  lg:space-x-5'>
                             <img src="/assets/Bitmap (15).png " className='w-[120px]' alt="" />
-                            <p className='text-[20px] text-[#391400]'>KeyBoard</p>
+                            <p className='text-[16px] lg:text-[20px] text-[#391400]'>KeyBoard</p>
                         </div>
-                        <div>
-                            <p className='text-[16px]'>19 Oct, 2021</p>
+                        <div className=''>
+                            <p className='text-[12px] lg:text-[16px]'>19 Oct, 2021</p>
                         </div>
 
-                        <div className='flex flex-col lg:flex-row items-center  space-y-5 lg:space-x-5'>
+                        <div className='flex flex-col lg:flex-row items-center  space-y-5 lg:space-y-0  lg:space-x-5'>
                             <p>Work Media</p>
                             <img src="/assets/Bitmap (16).png" className='w-[48px]' alt="" />
                         </div>
@@ -804,16 +806,15 @@ const Content = () => {
 
 
                     <div className='flex flex-col lg:flex-row  items-center justify-between space-y-5 lg:space-y-0 '>
-                        <div className='flex flex-col lg:flex-row  items-center space-y-5 lg:space-x-5 '>
+                        <div className='flex flex-col lg:flex-row  items-center space-y-5 lg:space-y-0  lg:space-x-5 '>
                             <img src="/assets/Bitmap (17).png " className='w-[120px]' alt="" />
-                            <p className='w-[100%] text-[20px] text-[#391400]'>Work Media</p>
+                            <p className=' text-[16px] lg:text-[20px] text-[#391400]'>Work Media</p>
                         </div>
-                        <div>
-
-                            <p className='text-[16px]'>7 Oct, 2021</p>
+                        <div className=''>
+                            <p className='text-[12px] lg:text-[16px]'>7 Oct, 2021</p>
                         </div>
 
-                        <div className='flex flex-col lg:flex-row items-center space-y-5 lg:space-x-5'>
+                        <div className='flex flex-col lg:flex-row items-center space-y-5 lg:space-y-0  lg:space-x-5'>
                             <p>The FWA</p>
                             <img src="/assets/Bitmap (18).png" className='w-[48px]' alt="" />
                         </div>
@@ -827,16 +828,16 @@ const Content = () => {
                     <p className='text-[#391400] text-[16px]'>Want more awards? <span className='font-semibold'>Explore Now</span> </p>
                 </div>
 
-                <p className='text-[#EF6D58] text-[20px] lg:text-[16px] ml-8 mt-10 lg:ml-48 lg:mt-20'>Our Blog</p>
+                <p className='text-[#EF6D58] text-[20px] lg:text-[16px] ml-8 mt-10 xl:ml-32 2xl:ml-48 lg:mt-20'>Our Blog</p>
 
-                <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between ml-8 lg:ml-48 lg:mr-48'>
+                <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between ml-8 xl:ml-32 xl:mr-20 2xl:ml-48 2xl:mr-40'>
                     <p className='text-[56px] text-[#391400]'>Latest Blog <p>Articles</p> </p>
                     <button className='bg-[#ffff]  border-1 border-[#ffff] rounded-sm w-[138px] p-3 '>
-                        Contact Us
+                        Discover All
                     </button>
-                </div>
+                </div> {/*  */}
 
-                <div className='flex flex-col lg:flex-row mt-10 ml-8 lg:justify-center lg:items-center space-y-5 lg:space-x-5'>
+                <div className='flex flex-col lg:flex-row mt-10 ml-8 lg:justify-center lg:items-center space-y-5 lg:space-y-0 lg:space-x-5 2xl:space-x-10'>
                     <div className='text-[#391400] text-[24px] space-y-3'>
                         <img src="/assets/Bitmap (21).png" className='w-[370px] h-[224px]' alt="" />
                         <p className='text-[24px] '>Stories</p>
@@ -869,7 +870,7 @@ const Content = () => {
 
 
 
-                <div className='flex flex-col lg:flex-row lg:justify-between space-y-5 lg:space-y-0 lg:items-center ml-8 lg:ml-48 lg:mr-48 mt-24'>
+                <div className='flex flex-col lg:flex-row lg:justify-between space-y-5 lg:space-y-0 lg:items-center ml-8 xl:ml-28 xl:mr-24 2xl:ml-48 2xl:mr-40 mt-24'>
                     <div>
                         <p className='text-[40px] text-[#391400]'>Newsletter</p>
                     </div>
@@ -899,7 +900,7 @@ const Content = () => {
                         </div>
                     </div>
 
-                    <div className='absolute top-72 right-96 '>
+                    <div className='absolute top-80 right-96 2xl:top-72 2xl:right-96 '>
                         <img src="/assets/pin.png" className='w-[72px]' alt="" />
                     </div>
                 </div>
@@ -929,7 +930,7 @@ const Content = () => {
                     <div className='absolute top-72 right-36 '>
                         <img src="/assets/pin.png" className='w-[72px]' alt="" />
                     </div>
-                </div>
+                </div> {/**/}
 
 
 
@@ -968,12 +969,12 @@ const Content = () => {
                 </div>
 
 
-                <div className='flex flex-col lg:flex-row justify-evenly items-center lg:items-start space-y-10 lg:space-y-0  mt-20'>
-                    <div>
-                        <p className='text-[24px] text-[#391400]'>Agency</p>
+                <div className='flex flex-col lg:flex-row justify-evenly items-center    lg:items-baseline space-y-10 lg:space-y-0  mt-20'>
+                    <div className=''>
+                        <p className='text-[24px] text-[#391400] '>Agency</p>
                     </div>
 
-                    <div className='text-[20px] flex flex-col items-center lg:block lg:text-[16px] space-y-3 text-[#391400]'>
+                    <div className='text-[20px] flex flex-col items-center lg:block lg:text-[16px]   space-y-3 text-[#391400]'>
                         <p className='text-[#EF6D58] '>Menu</p>
                         <p>About</p>
                         <p>Services</p>
@@ -989,7 +990,7 @@ const Content = () => {
                         <p>See More</p>
                     </div>
 
-                    <div className='flex space-x-5 items-center'>
+                    <div className='flex space-x-5 items-center lg:self-start'>
                         <img src="/assets/CompositeLayer (10).png" className='w-[48px]' alt="" />
                         <img src="/assets/CompositeLayer (11).png" className='w-[48px]' alt="" />
                         <img src="/assets/CompositeLayer (12).png" className='w-[48px]' alt="" />
@@ -997,14 +998,19 @@ const Content = () => {
                 </div>
 
 
-                <div className='flex w-[100%] flex-col lg:flex-row justify-between items-center  mt-10 lg:ml-40 lg:mr-40'>
-                    <p className='text-[16px] w-[50%] text-center lg:text-left  '>Copyright © 2022 Laaqiq. All Rights Reserved.
-                    </p>
+
+
+                <div className='flex flex-col lg:flex-row justify-between items-center'>
+
+                    <div className='w-[100%] flex items-center justify-center space-x-1 mt-10'>
+                        <p>Copyright © 2022 Laaqiq.</p>
+                        <p>All Rights Reserved.</p>
+                    </div>
                     <div className='w-[100%] flex items-center justify-center space-x-5 mt-10'>
                         <p>Terms of Use</p>
                         <p>Privacy Policy</p>
                     </div>
-                </div> {/**/}
+                </div>
             </div>
         </div >
 

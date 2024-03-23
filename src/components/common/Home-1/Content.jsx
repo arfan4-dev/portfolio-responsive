@@ -266,8 +266,7 @@ const Content = () => {
 
                     </div>
                 </div>
-            </div>{/*  */}
-
+            </div>
 
             <div className='bg-[#28293E] '>
 
@@ -634,7 +633,7 @@ const Content = () => {
                 <button className='bg-[#ffff]  border-1 border-[#ffff] rounded-sm w-[138px] p-3 mt-5 '>
                     See All
                 </button>
-            </div>  {/**/}
+            </div>
 
 
 
@@ -835,7 +834,7 @@ const Content = () => {
                     <button className='bg-[#ffff]  border-1 border-[#ffff] rounded-sm w-[138px] p-3 '>
                         Discover All
                     </button>
-                </div> {/*  */}
+                </div>
 
                 <div className='flex flex-col lg:flex-row mt-10 ml-8 lg:justify-center lg:items-center space-y-5 lg:space-y-0 lg:space-x-5 2xl:space-x-10'>
                     <div className='text-[#391400] text-[24px] space-y-3'>

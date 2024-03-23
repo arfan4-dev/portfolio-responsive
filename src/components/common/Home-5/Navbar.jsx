@@ -1,17 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react'
-import Section from './Section'
-// import Content from './Content'
-
 import { FiAlignJustify } from "react-icons/fi";
-const HomeTwo = () => {
+import Section from './Section';
+const Navbar = () => {
     return (
         <div className=''>
-            <div className='lg:hidden bg-[#28293E]  h-[950px] xl:h-[1104px] w-[135%] text-[#FFFFFF] ' >
+            {/* Mobile screen Navbar */}
+            <div className='lg:hidden bg-[#28293E]   text-[#FFFFFF]  '>
                 <nav className=' flex items-center justify-between py-5 mx-5'>
                     <figure className='flex items-center space-x-5'>
                         <img src="/assets/logo.svg" alt="" className='w-[46px]' />
-                        <figcaption className='text-[20px] lg:text-[24px]'>Personal</figcaption>
+                        <figcaption>Webflow</figcaption>
                     </figure>
                     <div className='border-1 border-[white] rounded-md p-3'>
                         <FiAlignJustify className='w-[16px]' />
@@ -20,7 +19,10 @@ const HomeTwo = () => {
                 <Section />
 
             </div>
-            <div className={`bg-[#28293E] h-[700px] hidden lg:block text-[#FFFFFF] `}>
+
+            {/*  Desktop Screen Navbar */}
+            < div className={`bg-[#28293E]   hidden lg:block  text-[#FFFFFF] `
+            }>
 
                 <nav className='flex items-center justify-around py-5'>
                     <figure className='flex items-center space-x-5'>
@@ -50,9 +52,9 @@ const HomeTwo = () => {
 
 
                 <Section />
-            </div>
-        </div>
+            </ div>
+        </div >
     )
 }
 
-export default HomeTwo
+export default Navbar

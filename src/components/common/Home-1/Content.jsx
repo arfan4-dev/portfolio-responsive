@@ -1,9 +1,51 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
+import React, { useRef, useState, useEffect } from 'react'
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/pagination';
 
 const Content = () => {
+    const swiperRef = useRef(null);
+    const [width, setWidth] = useState();
+    const [slideView, setSlideView] = useState(4)
+    const [spaceBetween, setSpaceBetween] = useState(20)
+    const handleBackClick = () => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.slidePrev();
+        }
+    };
+
+    const handleForwardClick = () => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.slideNext();
+        }
+    };
+    useEffect(() => {
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+    useEffect(() => {
+        if (width < 640) {
+            setSlideView(1.3);
+            setSpaceBetween(5)
+
+        } else {
+            setSlideView(4);
+            setSpaceBetween(20)
+        }
+    }, [width]);
     return (
-        <div className='bg-[#FDF0E9] h-[100%] w-[132%] lg:w-full py-10'>
+        <div className='bg-[#FDF0E9] h-[100%] w-[140%] lg:w-full py-10'>
             <div className='grid grid-cols-2 grid-rows-2 justify-items-center place-items-center gap-10 lg:flex lg:items-center lg:justify-around'>
                 <img src="/assets/sign1.png" alt="" className='w-[147px]' />
                 <img src="/assets/sign2.png" alt="" className='w-[108px]' />
@@ -14,7 +56,6 @@ const Content = () => {
             <div className='flex items-center justify-center lg:hidden mt-10'>
                 <img src="/assets/sign5.png" alt="" className='w-[126px] ' />
             </div>
-            {/* <p className='w-[200px] h-[1px] text-black' ></p> */}
 
             <div className='flex flex-col items-center lg:flex-row relative justify-center  xl:space-x-28 mt-40 2xl:mt-72 '>
                 <div className='2xl:mt-16 ' >
@@ -46,14 +87,22 @@ const Content = () => {
 
             <div className='flex flex-row justify-center mt-40'>
                 <div className='text-[#391400] flex flex-col lg:flex-row'>
-                    <p className='w-[391px] text-[40px]  border-1  border-[#391400] p-10'>42% <p className='text-[20px]'>Years of experience
-                    </p></p>
-                    <p className='w-[391px] text-[40px]  border-1  border-[#391400] p-10'>73+ <p className='text-[20px]'>Agency members
+                    <div className='w-[391px] border-1  border-[#391400] p-10'>
+                        <p className=' text-[40px]  '>42% </p>
+                        <p className='text-[20px]'>Years of experience </p>
+                    </div>
 
-                    </p></p>
-                    <p className='w-[391px] text-[40px]  border-1  border-[#391400] p-10'>5.000 <p className='text-[20px]'>Projects complete
+                    <div className='w-[391px] border-1  border-[#391400] p-10'>
+                        <p className=' text-[40px]'>73+ </p>
+                        <p className='text-[20px]'>Agency members</p>
+                    </div>
 
-                    </p></p>
+
+                    <div className='w-[391px] border-1  border-[#391400] p-10'>
+                        <p className=' text-[40px] '>5.000</p>
+                        <p className='text-[20px]'>Projects complete</p>
+                    </div>
+
 
                 </div>
             </div>
@@ -103,7 +152,8 @@ const Content = () => {
 
                 <div className='font-semibold lg:font-normal mt-10'>
                     <p className='text-[#EF6D58] text-[16px] font-normal'>Video Reel</p>
-                    <p className='text-[40px] text-[#391400] '>Unlock The Greatest <p>Value Possible</p></p>
+                    <p className='text-[40px] text-[#391400] '>Unlock The Greatest </p>
+                    <p className='text-[40px] text-[#391400] '>Value Possible</p>
                     <p>Design, business understanding, ability to put themselves</p>
                     <p> in the merchant`s shoes meant to partner.</p>
                 </div>
@@ -113,7 +163,8 @@ const Content = () => {
                 <div className='self-start ml-10 space-y-5 lg:ml-0'>
                     <p className='text-[#EF6D58] text-[20px]'>Features
                     </p>
-                    <p className='text-[56px] text-[#391400]'>Give Your Site  <p> A New Look </p></p>
+                    <p className='text-[56px] text-[#391400]'>Give Your Site  </p>
+                    <p className='text-[56px] text-[#391400]'> A New Look </p>
                     <p> Service range including technical skills, design,</p>
                     <p> business understanding.</p>
 
@@ -151,8 +202,8 @@ const Content = () => {
             <div className='flex flex-col space-y-10 lg:flex-row justify-around  mt-64 items-center tracking-[1px]'>
                 <div className='text-[#391400] text-[20px]  '>
                     <p className='text-[#EF6D58] text-[16px] mb-8 tracking-[1.5px]'>Features</p>
-                    <p>Long run, and work as an extension <p className='mb-8'>of the merchant`s team.</p> </p>
-
+                    <p>Long run, and work as an extension  </p>
+                    <p className='mb-8'>of the merchant`s team.</p>
                     <p className='text-[16px]'>Read More</p>
                 </div>
 
@@ -160,14 +211,14 @@ const Content = () => {
                     <div className='bg-white w-[336px] h-[336px] rounded-lg text-[16px] flex flex-col p-10 space-y-1'>
                         <img src="/assets/CompositeLayer (2).png" alt="" className='w-[80px] mb-5' />
                         <p className='text-[24px] text-[#391400]'>Professional</p>
-                        <p className='leading-[40px]'>Full service range including <p>technical skills, design.</p> </p>
-
+                        <p className='leading-[40px]'>Full service range including </p>
+                        <p>technical skills, design.</p>
                     </div>
                     <div className='border-1 border-[#f3d1bf] w-[336px] h-[272px] py-20 px-10 rounded-lg text-[16px] flex flex-col space-y-1'>
                         <p className='text-[24px] text-[#391400]'>Accessibility</p>
-                        <p className='leading-[40px]'>Business understanding,<p>ability to put themselves.
-                        </p> </p>
-
+                        <p className='leading-[40px]'>Business understanding, </p>
+                        <p>ability to put themselves.
+                        </p>
                     </div>
                 </div>
 
@@ -235,8 +286,8 @@ const Content = () => {
                             <div className='text-[#391400] text-[20px] mt-5'>
                                 <img src="/assets/CompositeLayer (5).png" alt="" className='' />
                                 <p className='text-[#EF6D58] text-[16px] my-8'>Design</p>
-                                <p>Agency provides a full service range <p className='mb-8'> including technical skills, design.</p> </p>
-
+                                <p>Agency provides a full service range  </p>
+                                <p className='mb-8'> including technical skills, design.</p>
                                 <p className='text-[16px]'>Learn More</p>
                             </div>
 
@@ -245,8 +296,8 @@ const Content = () => {
                             <div className='text-[#391400] text-[20px] mt-5'>
                                 <img src="/assets/CompositeLayer (6).png" alt="" className='' />
                                 <p className='text-[#EF6D58] text-[16px] my-8'>Development</p>
-                                <p>Full service range including technical <p className='mb-8'>skills, design, business.</p> </p>
-
+                                <p>Full service range including technical  </p>
+                                <p className='mb-8'>skills, design, business.</p>
                                 <p className='text-[16px]'>Discover More</p>
                             </div>
 
@@ -257,8 +308,8 @@ const Content = () => {
                             <div className='text-[#391400] text-[20px] mt-5'>
                                 <img src="/assets/CompositeLayer (7).png" alt="" className='' />
                                 <p className='text-[#EF6D58] text-[16px] my-8'>Marketing</p>
-                                <p>Technical skills, design, business <p className='mb-8'>understanding, ability.</p> </p>
-
+                                <p>Technical skills, design, business  </p>
+                                <p className='mb-8'>understanding, ability.</p>
                                 <p className='text-[16px]'>Explore More</p>
                             </div>
 
@@ -364,7 +415,8 @@ const Content = () => {
                     <div className='border-1 border-[#3A3C56] w-[370px] h-[448px] p-8 '>
                         <div className='flex items-center space-x-5'>
                             <p className='text-[72px] text-[#ffff]'>3</p>
-                            <p className='text-[24px] text-[#ffff]'>November <p>2021</p></p>
+                            <p className='text-[24px] text-[#ffff]'>November </p>
+                            <p className='text-[24px] text-[#ffff]'>2021</p>
                         </div>
                         <div className='flex items-center mb-10 space-x-2'>
                             <img src="/assets/shape.png" className='w-[16px]' alt="" />
@@ -373,7 +425,8 @@ const Content = () => {
                         <hr className=' opacity-25' />
                         <div className='text-[16px] text-[#ffff] mt-8 space-y-8'>
                             <p className='text-[24px]'>Design Weeks</p>
-                            <p className='' style={{ color: 'RGBA(255,255,255,0.64 )' }}>Digital agency is a business you hire <p>to outsource your digital.</p></p>
+                            <p className='' style={{ color: 'RGBA(255,255,255,0.64 )' }}>Digital agency is a business you hire</p>
+                            <p style={{ color: 'RGBA(255,255,255,0.64 )' }}>to outsource your digital.</p>
                             <p className='text-[16px]'>Explore Now</p>
                         </div>
                     </div>
@@ -381,7 +434,8 @@ const Content = () => {
                     <div className='border-1 border-[#3A3C56] w-[370px] h-[448px] p-8 '>
                         <div className='flex items-center space-x-5'>
                             <p className='text-[72px] text-[#ffff]'>15</p>
-                            <p className='text-[24px] text-[#ffff]'>November <p>2021</p></p>
+                            <p className='text-[24px] text-[#ffff]'>November </p>
+                            <p className='text-[24px] text-[#ffff]'>2021</p>
                         </div>
                         <div className='flex items-center mb-10 space-x-2'>
                             <img src="/assets/shape.png" className='w-[16px]' alt="" />
@@ -390,7 +444,8 @@ const Content = () => {
                         <hr className=' opacity-25' />
                         <div className='text-[16px] text-[#ffff] mt-8 space-y-8'>
                             <p className='text-[24px]'>Interior Design</p>
-                            <p className='' style={{ color: 'RGBA(255,255,255,0.64 )' }}>Marketing efforts, instead of <p>handling in-house.</p></p>
+                            <p className='' style={{ color: 'RGBA(255,255,255,0.64 )' }}>Marketing efforts, instead of </p>
+                            <p style={{ color: 'RGBA(255,255,255,0.64 )' }}>handling in-house.</p>
                             <p className='text-[16px]'>Explore Now</p>
                         </div>
                     </div>
@@ -398,7 +453,8 @@ const Content = () => {
                     <div className='border-1 border-[#3A3C56] w-[370px] h-[448px] p-8'>
                         <div className='flex items-center space-x-5'>
                             <p className='text-[72px] text-[#ffff]'>2</p>
-                            <p className='text-[24px] text-[#ffff]'>December  <p>2021</p></p>
+                            <p className='text-[24px] text-[#ffff]'>December  </p>
+                            <p className='text-[24px] text-[#ffff]'>2021</p>
                         </div>
                         <div className='flex items-center mb-10 space-x-2'>
                             <img src="/assets/shape.png" className='w-[16px]' alt="" />
@@ -407,7 +463,8 @@ const Content = () => {
                         <hr className=' opacity-25' />
                         <div className='text-[16px] text-[#ffff] mt-8 space-y-8'>
                             <p className='text-[24px]'>The F design events</p>
-                            <p className='' style={{ color: 'RGBA(255,255,255,0.64 )' }}>Provide your business with a variety  <p> of digital solutions to promote.</p></p>
+                            <p className='' style={{ color: 'RGBA(255,255,255,0.64 )' }}>Provide your business with a variety </p>
+                            <p style={{ color: 'RGBA(255,255,255,0.64 )' }}> of digital solutions to promote.</p>
                             <p className='text-[16px]'>Explore Now</p>
                         </div>
                     </div>
@@ -419,31 +476,162 @@ const Content = () => {
                     <button className='bg-[#28293E] border-1 border-[#ffff] text-[#fff] rounded-sm px-10 py-3 mt-5 '>
                         Explore More
                     </button>
-                </div> {/**/}
+                </div>
 
 
 
-                {/* <div className='flex items-end justify-between ml-44 mr-44 mt-32'>
+                <div className='ml-5 w-[90%] lg:w-[100%] lg:flex items-end justify-between lg:ml-44 lg:mr-44 my-32'>
 
                     <div>
                         <p className='text-[#EF6D58] text-[16px]'>Our Team</p>
-                        <p className='text-[56px] text-[#ffff]'>Team of Designers<p>and Developers</p></p>
+                        <div className='text-[40px] lg:text-[56px] text-[#ffff]'>
+                            <p >Team of Designers</p>
+                            <p>and Developers</p>
+                        </div>
+
                     </div>
 
-                    <div className='flex items-center space-x-5 '>
-                        <div className='border-1 border-[#ffff] p-5 rounded-full cursor-pointer'>
+                    <div className='hidden lg:flex items-center space-x-5  '>
+                        <div className='border-1 border-[#ffff] p-5 rounded-full cursor-pointer' onClick={handleBackClick}>
                             <img src="/assets/Path (2).png" alt="" className='w-[14px] ' />
                         </div>
 
-                        <div className='border-1 border-[#ffff] p-5 rounded-full cursor-pointer'>
+                        <div className=' border-1 border-[#ffff] p-5 rounded-full cursor-pointer' onClick={handleForwardClick} >
                             <img src="/assets/Path (2).png" alt="" className='w-[14px rotate-180' />
                         </div>
                     </div>
-                </div> */}
+                </div>
+
+                {/* Swiper Slider */}
+
+                <Swiper
+                    slidesPerView={slideView}
+                    spaceBetween={spaceBetween}
+                    ref={swiperRef}
+                    modules={[Pagination]}
+                    pagination={true}
+                    className='mySwiper'
+                >
+
+                    <SwiperSlide className='ml-10 sm:ml-3 md:ml-7 lg:ml-4 xl:ml-7 2xl:-ml-0 3xl:ml-7'>
+                        <div>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (8).png" className='w-[196px] h-[247px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Azah Anyeni</p>
+                            <p className='text-[#FFFFFF] text-[16px]'>Designer</p>
+                        </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (9).png" className='w-[259px] h-[232px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Roelof Bekkenenks</p>
+                            <p className='text-[#FFFFFF] text-[16px]'>React Developer</p>
+                        </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (10).png" className='w-[205px] h-[238px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Leonardo Oliveira</p>
+                            <p className='text-[#FFFFFF] text-[16px]'>Illustrator</p>
+                        </div>
+
+
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <div className=''>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (11).png" className='w-[230px] h-[233px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Izabella Tabakova</p>
+                            <p className='text-[#FFFFFF]  text-[16px]'>Product Designer
+                            </p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <div className=''>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (8).png" className='w-[230px] h-[233px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Izabella Tabakova</p>
+                            <p className='text-[#FFFFFF]  text-[16px]'>Product Designer
+                            </p>
+                        </div>
+
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <div className=''>
+                            <div className='flex items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (9).png" className='w-[230px] h-[233px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Izabella Tabakova</p>
+                            <p className='text-[#FFFFFF]  text-[16px]'>Product Designer
+                            </p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <div className=''>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (10).png" className='w-[230px] h-[233px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Izabella Tabakova</p>
+                            <p className='text-[#FFFFFF]  text-[16px]'>Product Designer
+                            </p>
+                        </div>
+
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <div className=''>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (11).png" className='w-[230px] h-[233px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Izabella Tabakova</p>
+                            <p className='text-[#FFFFFF]  text-[16px]'>Product Designer
+                            </p>
+                        </div>
+                    </SwiperSlide>
 
 
 
-                {/*<div className='flex items-center justify-center space-x-9 mt-20'>
+
+
+
+
+
+
+
+
+
+                </Swiper>
+
+                {/* <div className='flex items-center justify-center space-x-9 mt-20'>
                     <div>
                         <div className='border-1 border-[#3A3C56] w-[270px] h-[272px]'>
                             <figure className='flex flex-col items-center justify-end'>
@@ -451,7 +639,7 @@ const Content = () => {
                             </figure>
                         </div>
                         <p className='text-[#FFFFFF] text-[24px]'>Azah Anyeni</p>
-                        <p className='text-[#FFFFFF] text-[24px]'>Designer</p>
+                        <p className='text-[#FFFFFF] text-[16px]'>Designer</p>
                     </div>
 
                     <div>
@@ -461,7 +649,7 @@ const Content = () => {
                             </figure>
                         </div>
                         <p className='text-[#FFFFFF] text-[24px]'>Roelof Bekkenenks</p>
-                        <p className='text-[#FFFFFF] text-[24px]'>React Developer</p>
+                        <p className='text-[#FFFFFF] text-[16px]'>React Developer</p>
                     </div>
 
                     <div>
@@ -471,7 +659,7 @@ const Content = () => {
                             </figure>
                         </div>
                         <p className='text-[#FFFFFF] text-[24px]'>Leonardo Oliveira</p>
-                        <p className='text-[#FFFFFF] text-[24px]'>Illustrator</p>
+                        <p className='text-[#FFFFFF] text-[16px]'>Illustrator</p>
                     </div>
 
                     <div className=''>
@@ -481,17 +669,13 @@ const Content = () => {
                             </figure>
                         </div>
                         <p className='text-[#FFFFFF] text-[24px]'>Izabella Tabakova</p>
-                        <p className='text-[#FFFFFF]  text-[24px]'>Product Designer
+                        <p className='text-[#FFFFFF]  text-[16px]'>Product Designer
                         </p>
                     </div>
 
 
-                </div>  */}
+                </div> */}
 
-
-                <div className='flex items-center justify-center mt-20'>
-                    <img src="/assets/pins.png" className='w-[76px]' alt="" />
-                </div> {/**/}
 
 
 
@@ -501,7 +685,13 @@ const Content = () => {
                     <div className='text-white relative space-y-5 self-start ml-6 mt-10 lg:ml-0 lg:self-center'>
                         <img src="/assets/Shape (1).png" alt="" className='w-[100px] absolute top-5 -right-20' />
                         <p className='text-[#EF6D58] text-[16px]'>Founder Words</p>
-                        <p className=' text-[30px] lg:text-[40px]'>Digital agency is a <p>a business you hire to </p> <p>outsource your digital </p> <p>marketing efforts</p> </p>
+                        <div className=' text-[30px] lg:text-[40px]'>
+                            <p>Digital agency is a  </p>
+                            <p>a business you hire to </p>
+                            <p>outsource your digital </p>
+                            <p>marketing efforts</p>
+                        </div>
+
                         <p className='text-[20px] font-semibold'>Ren Delan</p>
                         <p>Founder</p>
                     </div>
@@ -830,7 +1020,8 @@ const Content = () => {
                 <p className='text-[#EF6D58] text-[20px] lg:text-[16px] ml-8 mt-10 xl:ml-32 2xl:ml-48 lg:mt-20'>Our Blog</p>
 
                 <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between ml-8 xl:ml-32 xl:mr-20 2xl:ml-48 2xl:mr-40'>
-                    <p className='text-[56px] text-[#391400]'>Latest Blog <p>Articles</p> </p>
+                    <p className='text-[56px] text-[#391400] lg:w-[300px]'>Latest Blog Articles </p>
+                    <p className='text-[56px] text-[#391400]'></p>
                     <button className='bg-[#ffff]  border-1 border-[#ffff] rounded-sm w-[138px] p-3 '>
                         Discover All
                     </button>

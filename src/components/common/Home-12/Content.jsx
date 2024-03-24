@@ -4,147 +4,145 @@ import React from 'react'
 const Content = () => {
     return (
         <div className='bg-[#FDF0E9] min-h-screen'>
-            <div className='flex flex-col lg:flex-row   ml-5 mr-5 lg:ml-8 lg:justify-center lg:items-center space-y-5 lg:space-y-0 lg:space-x-5 2xl:space-x-10 py-16'>
-                <div className='text-[#391400] text-[26px] 2xl:text-[40px] space-y-3'>
-                    <img src="/assets/Bitmap (56).png" className='w-[370px] h-[224px] xl:w-[570px] xl:h-[336px]' alt="" />
-                    <p className='text-[20px] '>Stories</p>
-                    <p className='font-semibold'>Performance marketing</p>
-                    <p className='font-semibold'>agencies specialize</p>
-                    <p className='text-[16px] opacity-30'>7 Dec, 2021</p>
+            <div className='hidden sm:block bg-cover bg-center w-full h-[720px] relative ' style={{ backgroundImage: 'url(/assets/map.png)' }}>
 
-                </div>
+                <div className='absolute top-40 left-40 '>
+                    <div className='w-[360px] h-[464px] bg-white flex flex-col space-y-8 p-10' >
 
-                <div className='text-[#391400] text-[26px] 2xl:text-[40px] space-y-3'>
-                    <img src="/assets/Bitmap (57).png" className='w-[370px] h-[224px] xl:w-[570px] xl:h-[336px]' alt="" />
-                    <p className='text-[20px] '>Design</p>
-                    <p className='font-semibold'>Outsource your digital</p>
-                    <p className='font-semibold'>marketing efforts</p>
-                    <p className='text-[16px] opacity-30'>23 Nov, 2021
-                    </p>
-
-                </div>
-
-
-
-
-            </div>
-            <div className='flex flex-col lg:flex-row mr-5 ml-5 lg:ml-8 lg:justify-center lg:items-center space-y-5 lg:space-y-0 lg:space-x-5 2xl:space-x-10'>
-                <div className='text-[#391400] text-[18px] xl:text-[24px] space-y-3'>
-                    <img src="/assets/Bitmap (21).png" className='w-[370px] h-[224px]' alt="" />
-                    <p className='text-[20px] '>Stories</p>
-                    <p className='font-semibold'>Agency is a business you</p>
-                    <p className='font-semibold'>hire to outsource</p>
-                    <p className='text-[16px] opacity-30'>5 Nov, 2021</p>
-
-                </div>
-
-                <div className='text-[#391400] text-[18px] xl:text-[24px] space-y-3'>
-                    <img src="/assets/Bitmap (22).png" className='w-[370px] h-[224px]' alt="" />
-                    <p className='text-[20px] '>Design</p>
-                    <p className='font-semibold'>Outsource your digital</p>
-                    <p className='font-semibold'>marketing efforts</p>
-                    <p className='text-[16px] opacity-30'>29 Oct, 2021</p>
-
-                </div>
-
-                <div className='text-[#391400] text-[18px] xl:text-[24px] space-y-3'>
-                    <img src="/assets/Bitmap (23).png" className='w-[370px] h-[224px]' alt="" />
-                    <p className='text-[20px] '>Marketing</p>
-                    <p className='font-semibold'> Your business with a </p>
-                    <p className='font-semibold'> variety of digital</p>
-                    <p className='text-[16px] opacity-30'>21 Oct, 2021</p>
-
-                </div>
-
-
-            </div>
-            <div className='flex flex-col lg:flex-row  mr-5 ml-5 lg:ml-8  lg:justify-center lg:items-center space-y-5 lg:space-y-0 lg:space-x-5 2xl:space-x-10 py-14'>
-                <div className='text-[#391400] text-[18px] xl:text-[24px] space-y-3'>
-                    <img src="/assets/Bitmap (58).png" className='w-[370px] h-[224px]' alt="" />
-                    <p className='text-[20px] '>Design</p>
-                    <p className='font-semibold'>Analytics to track and
-                    </p>
-                    <p className='font-semibold'> report on results</p>
-                    <p className='text-[16px] opacity-30'>17 Nov, 2021</p>
-
-                </div>
-
-                <div className='text-[#391400] text-[18px] xl:text-[24px] space-y-3'>
-                    <img src="/assets/Bitmap (59).png" className='w-[370px] h-[224px]' alt="" />
-                    <p className='text-[20px] '>Branding</p>
-                    <p className='font-semibold'>The most well known</p>
-                    <p className='font-semibold'>performance</p>
-                    <p className='text-[16px] opacity-30'>12 Oct, 2021</p>
-
-                </div>
-
-                <div className='text-[#391400] text-[18px] xl:text-[24px] space-y-3'>
-                    <img src="/assets/Bitmap (60).png" className='w-[370px] h-[224px]' alt="" />
-                    <p className='text-[20px] '>Stories</p>
-                    <p className='font-semibold'> Marketing channels native </p>
-                    <p className='font-semibold'> advertising</p>
-                    <p className='text-[16px] opacity-30'>9 Oct, 2021</p>
-
-                </div>
-
-
-            </div>
-
-            <div className='flex items-center justify-center'>
-                <button className='bg-[#ffff]  border-1 border-[#ffff] text-[#391400] rounded-sm px-4 py-3 mt-5 '>
-                    Learn More
-                </button>
-            </div>
-
-            <div className='py-14 flex flex-col lg:flex-row lg:justify-between space-y-5 lg:space-y-0 lg:items-center ml-4 xl:ml-28 xl:mr-24 2xl:ml-48 2xl:mr-40 '>
-                <div>
-                    <p className='text-[40px] text-[#391400]'>Newsletter</p>
-                </div>
-                <div className=' space-y-5 lg:space-x-5'>
-                    <input type="text" name="" id="" placeholder='New Email' className='w-[343px] lg:w-[370px] h-[48px] p-5' />
-                    <button className='bg-[#ffff]  border-1 border-[#ffff]  rounded-sm w-[343px] h-[48px] lg:w-[138px] p-3 '>
-                        Contact Us
-                    </button>
-                </div>
-            </div>{/* */}
-
-            <div className='relative  '>
-
-
-                <div className='relative  flex justify-center items-center mt-10 '>
-                    <div className='bg-[#EF6D58] xl:h-[500px] 2xl:h-[600px] w-[90%] ml-0 lg:ml-0  lg:h-[442px] flex flex-col-reverse lg:flex-row items-center justify-around py-20 lg:py-0'>
-
-                        <div className=' space-y-10 mt-10 lg:mt-0 px-5'>
-                            <div className=' text-[40px] 2xl:text-[56px] text-[#ffff]'>
-                                <p> Help To Build</p>
-                                <p> Your Dream Project</p>
-                            </div>
-
-                            <div className='text-[12px] lg:text-[16px] text-[#ffff]'>
-                                <p>A digital agency is a business you hire to outsource your</p>
-                                <p>digital marketing efforts, instead of handling in-house.</p>
-                            </div>
-
-                            <button className='bg-[#ffff] text-[#391400] border-1 border-[#ffff] rounded-sm w-[118px] p-2 2xl:p-3 '>
-                                Contact Now
+                        <p className='text-[24px] text-[#391400]'>Get In Touch</p>
+                        <input type="text" placeholder='Your email' className='border-1 p-3  border-[#F3D1BF] w-[374px] h-[48px]' />
+                        <input type="text" placeholder='Subject' className=' border-1 p-3 border-[#F3D1BF] w-[374px] h-[48px]' />
+                        <textarea placeholder='Message' className='h-[96px]  border-1 p-3 border-[#F3D1BF] w-[374px]' />
+                        <div className='flex justify-end mr-5 '>
+                            <button className='bg-[#EF6D58]   border-1 border-[#EF6D58] text-[#ffff] rounded-sm w-[138px] p-2 '>
+                                Submit Now
                             </button>
-                        </div>
-
-                        <div className='relative'>
-                            <div >
-                                <img src="/assets/oval (5).png" alt="" className='w-[215px] lg:w-[318px] mt-10 lg:mt-0' />
-                            </div>
-                            <img src="/assets/CompositeLayer (9).png" alt="" className='absolute -top-[2rem] right-[10.3rem] lg:-top-14 lg:right-56 2xl:-top-28 2xl:right-56 w-[95px] xl:w-[120px] 2xl:w-[176px]' style={{ zIndex: '1' }} />
-                            <img src="/assets/Combined Shape (3).png" alt="" className='absolute top-[1.5rem] right-[8rem] xl:-top-0 xl:right-40 2xl:top-10 2xl:right-40 h-[95px] xl:w-[120px] 2xl:w-[100px]' />
-
-                            <img src="/assets/Bitmap-24.png" alt="" className='absolute -top-0 -right-8 lg:-top-10 lg:-right-14 w-[148px] h-[190px] lg:w-[246px] lg:h-[305px]' />
-                            <img src="/assets/block (3).png" alt="" className='absolute top-[105px] right-[105px] lg:top-[120px] lg:right-[170px] w-[108px] h-[60px] lg:w-[214px] lg:h-[112px]' />
-                            <img src="/assets/ARROW.svg" alt="" className='absolute top-[170px] right-[97px] lg:top-[230px] opacity-50 lg:right-[140px] w-[78px] lg:w-[94px]' />
-
                         </div>
                     </div>
                 </div>
+
+                <div className='absolute top-80 right-96 2xl:top-72 2xl:right-96 '>
+                    <img src="/assets/pin.png" className='w-[72px]' alt="" />
+                </div>
             </div>
+
+            <div className='block sm:hidden bg-cover bg-center w-full h-[720px] relative py-10' >
+                <div className='flex items-center justify-center'>
+                    <div className='w-[430px] h-[464px] bg-white flex flex-col space-y-8 p-5' >
+
+                        <p className='text-[24px] text-[#391400]'>Get In Touch</p>
+                        <input type="text" placeholder='Your email' className='border-1 p-3  border-[#F3D1BF] w-[260px] lg:w-[374px] h-[48px]' />
+                        <input type="text" placeholder='Subject' className=' border-1 p-3 border-[#F3D1BF] w-[260px] lg:w-[374px] h-[48px]' />
+                        <textarea placeholder='Message' className='h-[96px]  border-1 p-3 border-[#F3D1BF] w-[260px] lg:w-[374px]' />
+                        <div className='flex justify-end mr-5 '>
+                            <button className='bg-[#EF6D58]   border-1 border-[#EF6D58] text-[#ffff] rounded-sm w-[138px] p-2 '>
+                                Submit Now
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div className='block sm:hidden  bg-cover bg-center w-[100%] h-[720px] relative mt-0' style={{ backgroundImage: 'url(/assets/map.png)' }}>
+
+                <div className='absolute top-72 right-36 '>
+                    <img src="/assets/pin.png" className='w-[72px]' alt="" />
+                </div>
+            </div> {/**/}
+
+
+            <div className='flex justify-center  2xl:mt-0 py-10  xl:py-10 bg-[#FDF0E9]'>
+                <div className='text-[#391400] text-[16px]  flex flex-col lg:flex-row'>
+                    <div className='w-[300px] xl:w-[391px] xl:h-[126px] space-y-2  border-1  border-[#F3D1BF]  p-10 lg:p-4  '>
+                        <div className='text-[#391400] flex items-center  space-x-5'>
+                            <img src="/assets/CompositeLayer (18).png" alt="" className='lg:w-[60px] 2xl:w-[80px]' />
+                            <div className=''>
+                                <p className=' text-[16px] text-[#EF6D58]'>Phone</p>
+
+                            </div>
+                        </div>
+                        <p className='text-[20px]'>+1 (234) 567-89-00</p>
+
+
+                    </div>
+                    <div className='w-[300px] xl:w-[391px] xl:h-[126px] text-[16px] text-[#0e0d0c] space-y-2   border-1  border-[#F3D1BF]  p-10 lg:p-4'>
+                        <div className=' flex items-center  space-x-5'>
+                            <img src="/assets/CompositeLayer (17).png" alt="" className=' lg:w-[60px] 2xl:w-[80px]' />
+                            <div>
+                                <p className='text-[16px] text-[#EF6D58]'>Email</p>
+
+                            </div>
+
+                        </div>
+                        <p className='text-[20px]'>info@agency.com</p>
+                    </div>
+                    <div className=' w-[300px] xl:w-[391px] xl:h-[126px] text-[16px] text-[#0e0d0c] space-y-2   border-1  border-[#F3D1BF] p-10 lg:p-4'>
+                        <div className=' flex items-center  space-x-5'>
+                            <img src="/assets/CompositeLayer (16).png" alt="" className=' lg:w-[60px] 2xl:w-[80px]' />
+                            <div>
+                                <p className='text-[16px] text-[#EF6D58]'>Address</p>
+                            </div>
+
+                        </div>
+                        <p>+1 (234) 567-89-00</p>
+                    </div>
+
+
+
+
+                </div>
+
+
+            </div>
+
+            <div className='flex flex-col lg:flex-row justify-evenly  py-10 '>
+                <div className='text-[16px] text-[#391400] space-y-7 ml-8 lg:ml-0'>
+                    <div className='text-[50px] lg:text-[40px] font-semibold text-[#391400] lg:leading-[50px]'>
+                        <p className='text-[20px]  font-normal lg:text-[16px] text-[#EF6D58] mb-5 tracking-[1.5px]'>Faq</p>
+                        <p>Frequently Asked </p>
+                        <p>Questions</p>
+                    </div>
+                    <p>A digital agency is a business you hire to outsource your</p>
+                    <p>digital marketing efforts, instead of handling in-house.</p>
+                    <p className='font-semibold'>Contact Us</p>
+
+                </div>
+                <div className='self-center mt-20 lg:self-start'>
+                    <div className='w-[343px] h-[363px] lg:w-[570px] lg:h-[273px] text-[14px] lg:text-[16px]  py-5 px-10 bg-[#FFFFFF]'>
+                        <div className='text-[#391400]  flex justify-between items-center py-5  text-[24px]'>
+                            <p>A digital agency is a business</p>
+                            <img src="/assets/up.png" alt="" className='w-[32px]' />
+                        </div>
+                        <div className='space-y-3'>
+                            <p>Digital marketing efforts, instead of handling in-house. They</p>
+                            <p>can provide your business with a variety of digital solutions</p>
+                            <p>to promote your product or service online and help you hit</p>
+                            <p>your marketing goals and grow your business.</p>
+                        </div>
+                    </div>
+                    <div className='w-[343px] lg:w-[570px] self-center lg:self-start h-[113px] flex items-center justify-between p-10 border-1 border-[#F3D1BF]'>
+                        <p className='text-[18px] lg:text-[24px] text-[#391400]'>Hire to outsource your digital</p>
+                        <img src="/assets/down.png" className='w-[32px]' alt="" />
+                    </div>
+                    <div className='w-[343px] lg:w-[570px] h-[113px] self-center lg:self-start flex items-center justify-between p-10 border-1 border-[#F3D1BF]'>
+                        <p className='text-[18px] lg:text-[24px] text-[#391400]'>Marketing efforts</p>
+                        <img src="/assets/down.png" className='w-[32px]' alt="" />
+                    </div>
+                    <div className='w-[343px] lg:w-[570px] h-[113px] self-center lg:self-start flex items-center justify-between p-10 border-1 border-[#F3D1BF]'>
+                        <p className='text-[18px] lg:text-[24px] text-[#391400]'>Can provide your business</p>
+                        <img src="/assets/down.png" className='w-[32px]' alt="" />
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+
+
 
             <div className='flex flex-col lg:flex-row justify-evenly items-center    lg:items-baseline space-y-10 lg:space-y-0  mt-20'>
                 <div className=''>

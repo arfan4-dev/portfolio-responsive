@@ -1,8 +1,14 @@
 import Head from "next/head";
 import { primaryFont } from "../lib/fonts";
 import { SITE_TITLE } from "@/lib/constants";
-import Navbar from "@/components/common/Home-9/Navbar";
-import Content from "@/components/common/Home-9/Content";
+import Navbar from "@/components/common/Home-12/Navbar";
+import Content from "@/components/common/Home-12/Content";
+// import Navbar from "@/components/common/Home-11/Navbar";
+// import Content from "@/components/common/Home-11/Content";
+// import Navbar from "@/components/common/Home-10/Navbar";
+// import Content from "@/components/common/Home-10/Content";
+// import Navbar from "@/components/common/Home-9/Navbar";
+// import Content from "@/components/common/Home-9/Content";
 // import Navbar from "@/components/common/Home-8/Navbar";
 // import Content from "@/components/common/Home-8/Content";
 // import Navbar fro@/components/common/Home-8/Navbarbar";
@@ -71,9 +77,20 @@ export default function Home() {
 
         {/* Home-9 */}
 
+        {/* <Navbar />
+        <Content /> */}
+
+        {/* Home-10 */}
+        {/* <Navbar />
+        <Content /> */}
+
+        {/* Home-11 */}
+        {/* <Navbar />
+        <Content /> */}
+
+        {/* Home-12 */}
         <Navbar />
         <Content />
-
       </main>
     </>
   );

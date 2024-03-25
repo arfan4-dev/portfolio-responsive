@@ -1,7 +1,49 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/pagination';
 
 const Content = () => {
+    const swiperRef = useRef(null);
+    const [width, setWidth] = useState();
+    const [slideView, setSlideView] = useState(4)
+    const [spaceBetween, setSpaceBetween] = useState(20)
+    const handleBackClick = () => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.slidePrev();
+        }
+    };
+
+    const handleForwardClick = () => {
+        if (swiperRef.current && swiperRef.current.swiper) {
+            swiperRef.current.swiper.slideNext();
+        }
+    };
+    useEffect(() => {
+        const handleResize = () => {
+            setWidth(window.innerWidth);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
+    useEffect(() => {
+        if (width < 640) {
+            setSlideView(1.3);
+            setSpaceBetween(5)
+
+        } else {
+            setSlideView(4);
+            setSpaceBetween(20)
+        }
+    }, [width]);
     return (
         <div className='min-h-screen bg-[#FDF0E9]'>
 
@@ -81,163 +123,238 @@ const Content = () => {
             </div>
 
 
-            <div className='min-h-screen bg-[#28293E]'>
-                {/* <div className='flex items-end justify-between ml-44 mr-44 py-14'>
+            <div className='min-h-screen bg-[#28293E] py-5'>
+                <div className='ml-5 w-[90%] lg:w-[88%] lg:flex items-center justify-between lg:ml-20 lg:mr-64 my-32'>
 
                     <div>
                         <p className='text-[#EF6D58] text-[16px]'>Our Team</p>
-                        <p className='text-[56px] text-[#ffff]'>Team of Designers<p>and Developers</p></p>
+                        <div className='text-[40px] lg:text-[56px] text-[#ffff]'>
+                            <p >Team of Designers</p>
+                            <p>and Developers</p>
+                        </div>
+
                     </div>
 
-                    <div className='flex items-center space-x-5 '>
-                        <div className='border-1 border-[#ffff] p-5 rounded-full cursor-pointer'>
+                    <div className='hidden lg:flex items-center space-x-5  '>
+                        <div className='border-1 border-[#ffff] p-5 rounded-full cursor-pointer' onClick={handleBackClick}>
                             <img src="/assets/Path (2).png" alt="" className='w-[14px] ' />
                         </div>
 
-                        <div className='border-1 border-[#ffff] p-5 rounded-full cursor-pointer'>
+                        <div className=' border-1 border-[#ffff] p-5 rounded-full cursor-pointer' onClick={handleForwardClick} >
                             <img src="/assets/Path (2).png" alt="" className='w-[14px rotate-180' />
                         </div>
                     </div>
-                </div> */}
-                {/* <div className='flex items-center justify-center space-x-9 mt-20'>
-                    <div>
-                        <div className='border-1 border-[#3A3C56] w-[270px] h-[272px]'>
-                            <figure className='flex flex-col items-center justify-end'>
-                                <img src="/assets/Bitmap (8).png" className='w-[196px] h-[247px]' alt="" />
-                            </figure>
-                        </div>
-                        <p className='text-[#FFFFFF] text-[24px]'>Azah Anyeni</p>
-                        <p className='text-[#FFFFFF] text-[24px]'>Designer</p>
-                    </div>
-
-                    <div>
-                        <div className='border-1 border-[#3A3C56] w-[270px] h-[272px]'>
-                            <figure className='flex flex-col items-center jusitfy-center'>
-                                <img src="/assets/Bitmap (9).png" className='w-[259px] h-[232px]' alt="" />
-                            </figure>
-                        </div>
-                        <p className='text-[#FFFFFF] text-[24px]'>Roelof Bekkenenks</p>
-                        <p className='text-[#FFFFFF] text-[24px]'>React Developer</p>
-                    </div>
-
-                    <div>
-                        <div className='border-1 border-[#3A3C56] w-[270px] h-[272px]'>
-                            <figure className='flex flex-col items-center jusitfy-center'>
-                                <img src="/assets/Bitmap (10).png" className='w-[205px] h-[238px]' alt="" />
-                            </figure>
-                        </div>
-                        <p className='text-[#FFFFFF] text-[24px]'>Leonardo Oliveira</p>
-                        <p className='text-[#FFFFFF] text-[24px]'>Illustrator</p>
-                    </div>
-
-                    <div className=''>
-                        <div className='border-1 border-[#3A3C56] w-[270px] h-[272px]'>
-                            <figure className='flex flex-col items-center jusitfy-center'>
-                                <img src="/assets/Bitmap (11).png" className='w-[230px] h-[233px]' alt="" />
-                            </figure>
-                        </div>
-                        <p className='text-[#FFFFFF] text-[24px]'>Izabella Tabakova</p>
-                        <p className='text-[#FFFFFF]  text-[24px]'>Product Designer
-                        </p>
-                    </div>
-
-
                 </div>
-                <div className='flex items-center justify-center mt-20'>
-                    <img src="/assets/pins.png" className='w-[76px]' alt="" />
-                </div> */}
+
+                {/* Swiper Slider */}
+
+                <Swiper
+                    slidesPerView={slideView}
+                    spaceBetween={spaceBetween}
+                    ref={swiperRef}
+                    modules={[Pagination]}
+                    pagination={true}
+                    className='mySwiper'
+                >
+
+                    <SwiperSlide className='ml-10 sm:ml-3 md:ml-7 lg:ml-4 xl:ml-7 2xl:-ml-0 3xl:ml-7'>
+                        <div>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (8).png" className='w-[196px] h-[247px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Azah Anyeni</p>
+                            <p className='text-[#FFFFFF] text-[16px]'>Designer</p>
+                        </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (9).png" className='w-[259px] h-[232px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Roelof Bekkenenks</p>
+                            <p className='text-[#FFFFFF] text-[16px]'>React Developer</p>
+                        </div>
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (10).png" className='w-[205px] h-[238px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Leonardo Oliveira</p>
+                            <p className='text-[#FFFFFF] text-[16px]'>Illustrator</p>
+                        </div>
 
 
-                <div className='flex flex-col justify-center items-center mt-28 '>
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <div className=''>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (11).png" className='w-[230px] h-[233px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Izabella Tabakova</p>
+                            <p className='text-[#FFFFFF]  text-[16px]'>Product Designer
+                            </p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <div className=''>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (8).png" className='w-[230px] h-[233px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Izabella Tabakova</p>
+                            <p className='text-[#FFFFFF]  text-[16px]'>Product Designer
+                            </p>
+                        </div>
+
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <div className=''>
+                            <div className='flex items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (9).png" className='w-[230px] h-[233px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Izabella Tabakova</p>
+                            <p className='text-[#FFFFFF]  text-[16px]'>Product Designer
+                            </p>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <div className=''>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (10).png" className='w-[230px] h-[233px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Izabella Tabakova</p>
+                            <p className='text-[#FFFFFF]  text-[16px]'>Product Designer
+                            </p>
+                        </div>
+
+                    </SwiperSlide>
+                    <SwiperSlide>
+
+                        <div className=''>
+                            <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
+                                <figure>
+                                    <img src="/assets/Bitmap (11).png" className='w-[230px] h-[233px]' alt="" />
+                                </figure>
+                            </div>
+                            <p className='text-[#FFFFFF] text-[24px]'>Izabella Tabakova</p>
+                            <p className='text-[#FFFFFF]  text-[16px]'>Product Designer
+                            </p>
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
+
+
+
+                {/* <div className='flex flex-col justify-center items-center mt-28 '>
                     <p className='text-[#EF6D58] text-[20px] lg:text-[16px] tracking-[1.5px]'>Testimonials</p>
                     <p className='text-[40px] lg:text-[56px] text-[#ffff]'>What Our</p>
                     <p className='text-[40px] lg:text-[56px] text-[#ffff]'>Clients Saying</p>
                 </div>
 
 
-                {/* <div className='flex flex-col lg:flex-row item-center  justify-center mt-10'> */}
-                {/* <div className='flex flex-col lg:flex-row item-center  justify-center '>
-                    <div className='w-[420px] h-[430px] lg:w-[446px] lg:h-[336px] space-y-10 border-1 border-[#F3D1BF]  text-[16px]  p-14'>
-                        <div className='flex items-center space-x-4'>
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+                <div className='flex flex-col lg:flex-row item-center  justify-center mt-10'>
+                    <div className='flex flex-col lg:flex-row item-center  justify-center '>
+                        <div className='w-[420px] h-[430px] lg:w-[446px] bg-white lg:h-[336px] space-y-10 border-1 border-[#F3D1BF]  text-[16px]  p-14'>
+                            <div className='flex items-center space-x-4'>
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
 
+                            </div>
+                            <div className='leading-[40px]'>
+                                <p>Provide your business with a variety of digital solutions to </p>
+                                <p> promote your product or service online.</p>
+
+                            </div>
+
+                            <div className='flex items-center space-x-5'>
+                                <img src="/assets/Oval (1).png" alt="" className='w-[80px]' />
+                                <div className='text-[#391400] '>
+                                    <p className='text-[24px]'>Richardo Kann</p>
+                                    <p className='text-[16px]'>Photogram</p>
+                                </div>
+                            </div>
                         </div>
-                        <div className='leading-[40px]'>
-                            <p>Provide your business with a variety of digital solutions to </p>
-                            <p> promote your product or service online.</p>
 
+                        <div className='w-[420px] h-[460px] lg:w-[586px] lg:h-[400px] space-y-10 bg-white text-[16px]  p-14'>
+                            <div className='flex items-center space-x-4'>
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+
+                            </div>
+                            <div>
+                                <p>A digital agency is a business you hire to outsource your </p>
+                                <p>digital marketing efforts, instead of handling in-house. They</p>
+                                <p>can provide your business with a variety of digital solutions to</p>
+                                <p>promote your product or service online and help you.</p>
+
+                            </div>
+
+                            <div className='flex items-center space-x-5'>
+                                <img src="/assets/Oval.png" alt="" className='w-[80px]' />
+                                <div className='text-[#391400] '>
+                                    <p className='text-[24px]'>Alan Martí</p>
+                                    <p className='text-[16px]'>Meta Inc.</p>
+                                </div>
+                            </div>
                         </div>
 
-                        <div className='flex items-center space-x-5'>
-                            <img src="/assets/Oval (1).png" alt="" className='w-[80px]' />
-                            <div className='text-[#391400] '>
-                                <p className='text-[24px]'>Richardo Kann</p>
-                                <p className='text-[16px]'>Photogram</p>
+                        <div className='bg-white w-[420px] h-[430px]  lg:w-[446px] lg:h-[336px]  space-y-10 border-1 border-[#F3D1BF]  p-14'>
+                            <div className='flex items-center space-x-4'>
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+                                <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
+
+                            </div>
+                            <div className='leading-[40px]'>
+                                <p>Outsource your digital marketing efforts, instead of handling </p>
+                                <p>in-house. They can provide your business with a variety.</p>
+
+
+                            </div>
+
+                            <div className='flex items-center space-x-5'>
+                                <img src="/assets/Oval (2).png" alt="" className='w-[80px]' />
+                                <div className='text-[#391400] '>
+                                    <p className='text-[24px]'>Graham Griffiths
+                                    </p>
+                                    <p className='text-[16px]'>Twitor</p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className='w-[420px] h-[460px] lg:w-[586px] lg:h-[400px] space-y-10 bg-white text-[16px]  p-14'>
-                        <div className='flex items-center space-x-4'>
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-
-                        </div>
-                        <div>
-                            <p>A digital agency is a business you hire to outsource your </p>
-                            <p>digital marketing efforts, instead of handling in-house. They</p>
-                            <p>can provide your business with a variety of digital solutions to</p>
-                            <p>promote your product or service online and help you.</p>
-
-                        </div>
-
-                        <div className='flex items-center space-x-5'>
-                            <img src="/assets/Oval.png" alt="" className='w-[80px]' />
-                            <div className='text-[#391400] '>
-                                <p className='text-[24px]'>Alan Martí</p>
-                                <p className='text-[16px]'>Meta Inc.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className='w-[420px] h-[430px]  lg:w-[446px] lg:h-[336px]  space-y-10 border-1 border-[#F3D1BF]  p-14'>
-                        <div className='flex items-center space-x-4'>
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-                            <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
-
-                        </div>
-                        <div className='leading-[40px]'>
-                            <p>Outsource your digital marketing efforts, instead of handling </p>
-                            <p>in-house. They can provide your business with a variety.</p>
 
 
-                        </div>
 
-                        <div className='flex items-center space-x-5'>
-                            <img src="/assets/Oval (2).png" alt="" className='w-[80px]' />
-                            <div className='text-[#391400] '>
-                                <p className='text-[24px]'>Graham Griffiths
-                                </p>
-                                <p className='text-[16px]'>Twitor</p>
-                            </div>
-                        </div>
-                    </div>
                 </div> */}
-
-
-
-
-                {/* </div> */}
 
 
                 <div className='flex flex-col  items-center justify-center mt-24 '>

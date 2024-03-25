@@ -3,7 +3,7 @@ import React from 'react'
 
 const Content = () => {
     return (
-        <div className='min-h-screen -mt-2 xl:mt-0 xl:h-[1600px] 2xl:h-[1800px] bg-[#28293E] w-[108%] lg:w-[100%]'>
+        <div className='min-h-screen  bg-[#28293E] w-[108%] lg:w-[100%]'>
             <div className='flex flex-col space-y-10 lg:flex-row justify-around items-start  lg:items-center ml-5  lg:ml-0 lg:mr-0  xl:py-20 2xl:py-0 tracking-[1px]'>
                 <div className='text-[#ffff] text-[20px]  '>
                     <p className='text-[#EF6D58] text-[16px] mb-8 tracking-[1.5px]'>Features</p>
@@ -65,14 +65,14 @@ const Content = () => {
                     <p>Expert Can Help</p>
                 </div>
 
-                <div className='flex justify-center '>
+                <div className='flex justify-center min-h-screen bg-[#FDF0E9]'>
                     <div className='text-[#391400] flex flex-col items-center lg:flex-row'>
                         <div className='w-[350px] h-[400px] text-[40px]  bg-[#FFFFFF] border-1  border-[#EF6D58] p-8 '>
                             <div className='text-[#391400] text-[16px] lg:text-[20px] mt-5'>
                                 <img src="/assets/CompositeLayer (5).png" alt="" className='' />
                                 <p className='text-[#EF6D58] text-[16px] my-8'>Design</p>
                                 <p>Agency provides a full service range </p>
-                                <p className='mb-8'> including technical skills, design.</p>
+                                <p> including technical skills, design.</p>
                                 <p className='text-[16px]'>Learn More</p>
                             </div>
 
@@ -194,8 +194,8 @@ const Content = () => {
                 </div>
 
 
-                {/*  */}
-                <div className='relative bg-[#28293E] h-[1400px] lg:h-[1500px]'>
+
+                <div className='relative bg-[#28293E]'>
                     <div className='absolute -top-40 flex flex-col  lg:flex-row justify-center items-center space-y-6 lg:space-y-0 lg:space-x-5 ml-5 mr-5 py-20 '>
                         <div className='relative  p-2'>
                             <img src="/assets/Bitmap (3).png" alt="" className=' w-[420px] lg:w-[448px] 2xl:w-[470px] h-[416px] ' />
@@ -294,7 +294,7 @@ const Content = () => {
                 </div>
 
 
-                <div className=' flex flex-col lg:flex-row  h-screen xl:h-[780px] 2xl:h-[880px] bg-[#28293E] items-center justify-around py-24 lg:py-0 mt-[1500px] lg:mt-0   2xl:mt-0'>
+                <div className=' flex flex-col lg:flex-row  min-h-screen bg-[#28293E] items-center justify-around py-24 lg:py-0  lg:mt-0   2xl:mt-0'>
 
                     <div className='relative'>
                         <img src="/assets/Triangle.png" alt="" className='w-[360px] lg:w-[551px] relative opacity-5' />
@@ -337,7 +337,7 @@ const Content = () => {
                 </div>
 
 
-                <div className='py-20   xl:h-[1020px] 2xl:h-[1080px] bg-[#28293E]'>
+                <div className='py-20 min-h-screen bg-[#28293E]'>
 
 
                     <div className='flex flex-col justify-center text-[#ffff] items-center  '>
@@ -373,7 +373,6 @@ const Content = () => {
                                         </div>
                                     </div>
                                 </div>
-
                                 <div className='w-[380px] h-[460px]  lg:w-[586px] lg:h-[336px] bg-white   space-y-10 border-1 border-[#F3D1BF]  p-14'>
                                     <div className='flex items-center space-x-4'>
                                         <img src="/assets/Star (1).png" className='w-[23px]' alt="" />
@@ -469,14 +468,15 @@ const Content = () => {
 
 
 
-                <div className='bg-[#FDF0E9] min-h-screen pb-28'>
-                    <div className='text-[#391400] text-[40px] 2xl:text-[56px]  ml-10 lg:ml-20 -mt-[100px] lg:mt-[400px]'>
+
+                <div className='bg-[#FDF0E9] min-h-screen '>
+                    <div className='text-[#391400] text-[40px] 2xl:text-[56px]  ml-10 lg:ml-20 -mt-[100px] lg:-mt-[200px]'>
                         <p className='text-[#EF6D58] text-[16px]'>Pricing</p>
                         <p>Explore</p>
                         <p>Pricing Plane</p>
                     </div>
 
-                    <div className='flex flex-col lg:flex-row items-center lg:items-end justify-center mt-20'>
+                    <div className='flex flex-col lg:flex-row items-center lg:items-end justify-center '>
                         <div className='w-[300px] lg:w-[391px] h-[512px] border-1 text-[16px] border-[#F3D1BF] p-12 space-y-5'>
                             <p className='text-[#EF6D58]'>Consultation</p>
                             <p className='text-[#391400] text-[40px]'>Free</p>
@@ -720,7 +720,7 @@ const Content = () => {
 
                 </div>
 
-                <div className='bg-[#28293E] h-[1150px]'>
+                <div className='bg-[#28293E] min-h-screen'>
                     <div className='flex flex-col lg:flex-row lg:justify-between space-y-5 lg:space-y-0 lg:items-center ml-4 xl:ml-28 xl:mr-24 2xl:ml-48 2xl:mr-40 '>
                         <div>
                             <p className='text-[40px] text-[#ffff]'>Newsletter</p>
@@ -857,11 +857,11 @@ const Content = () => {
                                 <p>Privacy Policy</p>
                             </div>
                         </div>
-                    </div>  {/* */}
+                    </div>
 
-                </div> {/* */}
+                </div>
 
-
+                {/*  */}
 
             </div>
 

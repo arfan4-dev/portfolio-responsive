@@ -3,7 +3,7 @@ import React from 'react'
 
 const Content = () => {
     return (
-        <div className='bg-[#FDF0E9] h-screen w-[140%] lg:w-full py-10'>
+        <div className='bg-[#FDF0E9] min-h-screen w-[140%] lg:w-full pt-10 overflow-x-hidden'>
 
             <div className='text-[56px] text-[#391400] flex justify-center items-center flex-col'>
                 <p className='text-[#EF6D58] text-[16px]'>Service</p>
@@ -112,7 +112,11 @@ const Content = () => {
                 <div className=' space-y-5 ml-10 lg:ml-0'>
                     <p className='text-[#EF6D58] text-[20px]'>Gabriel Pires
                     </p>
-                    <p className='text-[56px] text-[#391400]'>Professional <p> Web Designer </p></p>
+                    <div className='text-[56px] text-[#391400]'>
+                        <p >Professional </p>
+                        <p> Web Designer </p>
+                    </div>
+
                     <div className='leading-[30px]'>
                         <p className='text-[#391400] font-semibold'> Provides a full service range</p>
                         <p>Ability to put themselves in the merchant`s shoes. It is</p>
@@ -415,10 +419,14 @@ const Content = () => {
 
 
 
-                <p className='text-[#EF6D58] text-[16px] ml-8  xl:ml-24 2xl:ml-40  bg-[#FDF0E9]'>Our Blog</p>
-                <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between  py-20 lg:py-20 xl:ml-24 xl:mr-24 2xl:ml-40 2xl:mr-32 bg-[#FDF0E9]'>
+                <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between  py-20 lg:py-20 xl:ml-20 xl:mr-24 2xl:ml-40 2xl:mr-32 bg-[#FDF0E9]'>
+                    <div className='text-[40px] 2xl:text-[56px] text-[#391400] ml-8'>
+                        <p className='text-[#EF6D58] text-[16px]   bg-[#FDF0E9]'>Our Blog</p>
 
-                    <p className='text-[40px] 2xl:text-[56px] text-[#391400] ml-8'>Latest Blog <p>Articles</p> </p>
+                        <p >Latest Blog </p>
+                        <p>Articles</p>
+                    </div>
+
                     <button className='bg-[#ffff]  border-1 border-[#ffff] rounded-sm w-[138px] ml-8 p-1 2xl:p-3 '>
                         Discover All
                     </button>
@@ -463,7 +471,7 @@ const Content = () => {
 
 
 
-                <div className='flex flex-col lg:flex-row lg:justify-between space-y-5 bg-[#FDF0E9] py-20 lg:py-0 lg:space-y-0 lg:items-center lg:ml-8 xl:ml-28 xl:mr-24 2xl:ml-40 2xl:mr-32 '>
+                <div className='flex flex-col lg:flex-row lg:justify-between space-y-5 bg-[#FDF0E9] py-20 lg:py-24 lg:space-y-0 lg:items-center lg:ml-8 xl:ml-28 xl:mr-24 2xl:ml-40 2xl:mr-32 '>
                     <div className='py-14 ml-10 lg:ml-0 lg:text-left lg:py-0'>
                         <p className='text-[40px] text-[#391400]'>Newsletter</p>
                         <p>A digital agency is a business you hire to outsource</p>
@@ -561,7 +569,7 @@ const Content = () => {
 
                 </div>
 
-                <div className='grid grid-cols-2 grid-rows-2 gap-0 lg:flex '>
+                <div className='grid grid-cols-2 grid-rows-2 gap-0 lg:flex pt-10 lg:pt-20'>
                     <img src="assets/Bitmap (33).png" alt="" className='w-[273px] 2xl:w-[240px] flex-1' />
                     <img src="assets/Bitmap (34).png" alt="" className='w-[273px] 2xl:w-[240px] flex-1' />
                     <img src="assets/Bitmap (35).png" alt="" className='w-[273px] 2xl:w-[240px] flex-1' />
@@ -572,8 +580,8 @@ const Content = () => {
                 </div>
 
 
-                <div className='bg-[#28293E] py-10'>
-                    <div className='flex flex-col lg:flex-row justify-evenly items-center    lg:items-baseline space-y-10 lg:space-y-0  mt-20 '>
+                <div className='bg-[#28293E]  py-10'>
+                    <div className='flex flex-col lg:flex-row justify-evenly items-center lg:items-baseline space-y-10 lg:space-y-0  mt-20 '>
                         <div className=''>
                             <p className='text-[24px] text-white '>Personal</p>
                         </div>

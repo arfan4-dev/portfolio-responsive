@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { primaryFont } from "../lib/fonts";
 import { SITE_TITLE } from "@/lib/constants";
+// import Navbar from "@/components/common/Home-7/Navbar";
 // import Navbar from "@/components/common/Home-12/Navbar";
 // import Content from "@/components/common/Home-12/Content";
 // import Navbar from "@/components/common/Home-11/Navbar";
@@ -35,50 +36,50 @@ export default function Home() {
       </Head>
       <main className={` ${primaryFont.className}`}>
         {/* Home-1 */}
-        <Navbar />
+        <Navbar brand='Agency' />
         <Content />
 
 
         {/* Home-2 */}
-        {/* <Navbar />
-        <ContentTwo /> */}
+        {/* <Navbar /> */}
+        {/* <ContentTwo /> */}
 
 
         {/* Home-3 */}
 
-        {/* <NavbarThree />
-        <ContentThree /> */}
+        {/* <NavbarThree /> */}
+        {/* <ContentThree /> */}
 
 
         {/* Home-4 */}
 
-        {/* <Navbar />
-        <Content /> */}
+        {/* <Navbar /> */}
+        {/* <Content /> */}
 
         {/* Home-5 */}
-        {/* 
-        <Navbar />
-        <Content /> */}
+
+        {/* <Navbar /> */}
+        {/* <Content /> */}
 
 
         {/* Home-6 */}
-        {/* <Navbar />
-        <Content /> */}
+        {/* <Navbar /> */}
+        {/*  <Content /> */}
 
         {/* Home-7 */}
 
-        {/* <Navbar />
-        <Content /> */}
+        {/* <Navbar /> */}
+        {/*  <Content /> */}
 
         {/* Home-8 */}
-        {/*
-       <Navbar />
-         <Content />*/}
+
+        {/* <Navbar /> */}
+        {/* <Content />*/}
 
         {/* Home-9 */}
 
-        {/* <Navbar />
-        <Content /> */}
+        {/* <Navbar /> */}
+        {/*<Content /> */}
 
         {/* Home-10 */}
         {/* <Navbar />

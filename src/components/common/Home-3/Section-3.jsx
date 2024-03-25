@@ -7,7 +7,7 @@ const Section = () => {
 
             <div className='relative mt-24 xl:mt-5 2xl:mt-20 self-start ml-10 lg:ml-0 lg:self-center py-14 lg:py-0'>
                 <p className='text-[#EF6D58] text-[16px] mb-1 tracking-[2px] lg:tracking-[1px]'>Webflow Expert</p>
-                <div className='text-[50px] lg:text-[72px] relative leading-[60px] lg:leading-[80px] mb-2 sm:mb-10 tracking-[2px] lg:tracking-[1px]  ' style={{ zIndex: 1 }}>
+                <div className='text-[40px] lg:text-[72px] relative leading-[60px] lg:leading-[80px] mb-2 sm:mb-10 tracking-[2px] lg:tracking-[1px]  ' style={{ zIndex: 1 }}>
                     <p>Making Digital
                     </p>
                     <p>Products</p>

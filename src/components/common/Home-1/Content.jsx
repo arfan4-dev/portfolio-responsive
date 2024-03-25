@@ -26,7 +26,7 @@ const Content = () => {
     useEffect(() => {
         const handleResize = () => {
             setWidth(window.innerWidth);
-        };
+        }; 
 
         window.addEventListener("resize", handleResize);
 
@@ -45,7 +45,7 @@ const Content = () => {
         }
     }, [width]);
     return (
-        <div className='bg-[#FDF0E9] h-[100%] w-[140%] lg:w-full py-10'>
+        <div className='bg-[#FDF0E9] h-[100%] w-[140%] lg:w-full py-10 overflow-x-hidden'>
             <div className='grid grid-cols-2 grid-rows-2 justify-items-center place-items-center gap-10 lg:flex lg:items-center lg:justify-around'>
                 <img src="/assets/sign1.png" alt="" className='w-[147px]' />
                 <img src="/assets/sign2.png" alt="" className='w-[108px]' />
@@ -480,7 +480,7 @@ const Content = () => {
 
 
 
-                <div className='ml-5 w-[90%] lg:w-[100%] lg:flex items-end justify-between lg:ml-44 lg:mr-44 my-32'>
+                <div className='ml-5 w-[90%] lg:w-[88%] lg:flex items-center justify-between lg:ml-20 lg:mr-64 my-32'>
 
                     <div>
                         <p className='text-[#EF6D58] text-[16px]'>Our Team</p>
@@ -617,64 +617,9 @@ const Content = () => {
                             </p>
                         </div>
                     </SwiperSlide>
-
-
-
-
-
-
-
-
-
-
-
-
                 </Swiper>
 
-                {/* <div className='flex items-center justify-center space-x-9 mt-20'>
-                    <div>
-                        <div className='border-1 border-[#3A3C56] w-[270px] h-[272px]'>
-                            <figure className='flex flex-col items-center justify-end'>
-                                <img src="/assets/Bitmap (8).png" className='w-[196px] h-[247px]' alt="" />
-                            </figure>
-                        </div>
-                        <p className='text-[#FFFFFF] text-[24px]'>Azah Anyeni</p>
-                        <p className='text-[#FFFFFF] text-[16px]'>Designer</p>
-                    </div>
 
-                    <div>
-                        <div className='border-1 border-[#3A3C56] w-[270px] h-[272px]'>
-                            <figure className='flex flex-col items-center jusitfy-center'>
-                                <img src="/assets/Bitmap (9).png" className='w-[259px] h-[232px]' alt="" />
-                            </figure>
-                        </div>
-                        <p className='text-[#FFFFFF] text-[24px]'>Roelof Bekkenenks</p>
-                        <p className='text-[#FFFFFF] text-[16px]'>React Developer</p>
-                    </div>
-
-                    <div>
-                        <div className='border-1 border-[#3A3C56] w-[270px] h-[272px]'>
-                            <figure className='flex flex-col items-center jusitfy-center'>
-                                <img src="/assets/Bitmap (10).png" className='w-[205px] h-[238px]' alt="" />
-                            </figure>
-                        </div>
-                        <p className='text-[#FFFFFF] text-[24px]'>Leonardo Oliveira</p>
-                        <p className='text-[#FFFFFF] text-[16px]'>Illustrator</p>
-                    </div>
-
-                    <div className=''>
-                        <div className='border-1 border-[#3A3C56] w-[270px] h-[272px]'>
-                            <figure className='flex flex-col items-center jusitfy-center'>
-                                <img src="/assets/Bitmap (11).png" className='w-[230px] h-[233px]' alt="" />
-                            </figure>
-                        </div>
-                        <p className='text-[#FFFFFF] text-[24px]'>Izabella Tabakova</p>
-                        <p className='text-[#FFFFFF]  text-[16px]'>Product Designer
-                        </p>
-                    </div>
-
-
-                </div> */}
 
 
 
@@ -1020,16 +965,16 @@ const Content = () => {
                 <p className='text-[#EF6D58] text-[20px] lg:text-[16px] ml-8 mt-10 xl:ml-32 2xl:ml-48 lg:mt-20'>Our Blog</p>
 
                 <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between ml-8 xl:ml-32 xl:mr-20 2xl:ml-48 2xl:mr-40'>
-                    <p className='text-[56px] text-[#391400] lg:w-[300px]'>Latest Blog Articles </p>
-                    <p className='text-[56px] text-[#391400]'></p>
+                    <p className='text-[56px] text-[#391400] my-10 w-[300px]'>Latest Blog Articles </p>
+
                     <button className='bg-[#ffff]  border-1 border-[#ffff] rounded-sm w-[138px] p-3 '>
                         Discover All
                     </button>
                 </div>
 
-                <div className='flex flex-col lg:flex-row mt-10 ml-8 lg:justify-center lg:items-center space-y-5 lg:space-y-0 lg:space-x-5 2xl:space-x-10'>
-                    <div className='text-[#391400] text-[24px] space-y-3'>
-                        <img src="/assets/Bitmap (21).png" className='w-[370px] h-[224px]' alt="" />
+                <div className='flex flex-col lg:flex-row mt-10  lg:justify-center lg:items-center space-y-5 lg:space-y-0 lg:space-x-5 2xl:space-x-10'>
+                    <div className='text-[#391400] text-[24px] space-y-3 ml-8 lg:ml-0'>
+                        <img src="/assets/Bitmap (21).png" className='w-[95%]  lg:w-[370px] lg:h-[224px]' alt="" />
                         <p className='text-[24px] '>Stories</p>
                         <p className='font-semibold'>Agency is a business you</p>
                         <p className='font-semibold'>hire to outsource</p>
@@ -1037,8 +982,8 @@ const Content = () => {
 
                     </div>
 
-                    <div className='text-[#391400] text-[24px] space-y-3'>
-                        <img src="/assets/Bitmap (22).png" className='w-[370px] h-[224px]' alt="" />
+                    <div className='text-[#391400] text-[24px] space-y-3 ml-8 lg:ml-0'>
+                        <img src="/assets/Bitmap (22).png" className='w-[95%] lg:w-[370px] lg:h-[224px]' alt="" />
                         <p className='text-[24px] '>Design</p>
                         <p className='font-semibold'>Outsource your digital</p>
                         <p className='font-semibold'>marketing efforts</p>
@@ -1046,8 +991,8 @@ const Content = () => {
 
                     </div>
 
-                    <div className='text-[#391400] text-[24px] space-y-3'>
-                        <img src="/assets/Bitmap (23).png" className='w-[370px] h-[224px]' alt="" />
+                    <div className='text-[#391400] text-[24px] space-y-3 ml-8 lg:ml-0'>
+                        <img src="/assets/Bitmap (23).png" className='w-[95%] lg:w-[370px] lg:h-[224px]' alt="" />
                         <p className='text-[24px] '>Marketing</p>
                         <p className='font-semibold'> Your business with a </p>
                         <p className='font-semibold'> variety of digital</p>
@@ -1065,8 +1010,8 @@ const Content = () => {
                         <p className='text-[40px] text-[#391400]'>Newsletter</p>
                     </div>
                     <div className=' space-y-5 lg:space-x-5'>
-                        <input type="text" name="" id="" placeholder='New Email' className='w-[370px] h-[48px] p-5' />
-                        <button className='bg-[#ffff]  border-1 border-[#ffff]  rounded-sm w-[370px] h-[48px] lg:w-[138px] p-3 '>
+                        <input type="text" name="" id="" placeholder='New Email' className='w-[90%] h-[60px] lg:w-[370px] lg:h-[48px] p-5' />
+                        <button className='bg-[#ffff]  border-1 border-[#ffff]  rounded-sm w-[90%] h-[60px] lg:h-[48px] lg:w-[138px] p-3 '>
                             Contact Us
                         </button>
                     </div>

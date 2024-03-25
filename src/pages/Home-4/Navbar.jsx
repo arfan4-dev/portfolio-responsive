@@ -39,21 +39,27 @@ const Navbar = () => {
                         </Link>
                         <div className='flex flex-col text-[24px] font-semibold space-y-10 mt-10 mb-10'>
                             <p >
-                                About
+                                <Link href='/Home-4'>About</Link>
                             </p>
                             <p>
-                                Service
+                                <Link href='/Home-6'>
+                                    Service
+                                </Link>
+
                             </p>
                             <p>
                                 Pricing
                             </p>
-                            <p>
+                            <Link href='/Home-10'>
                                 Blog
-                            </p>
+                            </Link>
                         </div>
 
                         <button className='border-1 border-white rounded-sm  px-6 py-1.5'>
-                            Contact
+                            <Link href='/Home-12'>
+                                Contact
+                            </Link>
+
                         </button>
                     </div>
                     }

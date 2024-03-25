@@ -3,9 +3,9 @@ import React from 'react'
 
 const Section = () => {
     return (
-        <div className='flex flex-col-reverse items-center mt-20 lg:flex lg:flex-row lg:space-x-72 lg:ml-24 2xl:ml-36  lg:items-center'>
+        <div className='flex flex-col-reverse items-center mt-10 lg:flex lg:flex-row lg:space-x-72 lg:ml-24 2xl:ml-36  lg:items-center '>
 
-            <div className='relative mt-24 xl:mt-5 2xl:mt-32  '>
+            <div className='relative mt-24 xl:mt-10 2xl:mt-32 pb-14 '>
                 <p className='text-[#EF6D58] text-[16px] mb-1 tracking-[2px] lg:tracking-[1px]'>Modern Studio</p>
                 <div className='text-[60px] lg:text-[72px] relative leading-[80px] mb-2 sm:mb-10 tracking-[2px] lg:tracking-[1px]  ' style={{ zIndex: 1 }}>
                     <p>We’re Help</p>
@@ -37,7 +37,7 @@ const Section = () => {
             </div>
 
 
-            <div className='relative w-[]'>
+            <div className='relative w-[] mt-10'>
                 <div >
                     <img src="/assets/oval.svg" alt="" className='w-[280px] lg:w-[330px] 2xl:w-[380px]' />
                 </div>

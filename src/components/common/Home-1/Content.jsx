@@ -26,7 +26,7 @@ const Content = () => {
     useEffect(() => {
         const handleResize = () => {
             setWidth(window.innerWidth);
-        }; 
+        };
 
         window.addEventListener("resize", handleResize);
 
@@ -53,17 +53,17 @@ const Content = () => {
                 <img src="/assets/sign4.png" alt="" className='w-[86px]' />
                 <img src="/assets/sign5.png" alt="" className='w-[126px] hidden lg:block' />
             </div>
-            <div className='flex items-center justify-center lg:hidden mt-10'>
+            <div className='flex items-center justify-center lg:hidden mt-10 '>
                 <img src="/assets/sign5.png" alt="" className='w-[126px] ' />
             </div>
 
-            <div className='flex flex-col items-center lg:flex-row relative justify-center  xl:space-x-28 mt-40 2xl:mt-72 '>
+            <div className='flex flex-col items-center lg:flex-row relative justify-center  xl:space-x-28 mt-40  2xl:mt-72 '>
                 <div className='2xl:mt-16 ' >
                     <img src="/assets/Bitmap.png" alt="" className='relative w-[350px] xl:w-[320px] 2xl:w-[470px] ml-24 xl:-ml-16 2xl:ml-24 xl:-mt-32 2xl:-mt-12 lg:mt-0 lg:ml-0 ' style={{ zIndex: '1' }} />
-                    <img src="/assets/Rectangle.svg" alt="" className='w-[310px] xl:w-[250px] 2xl:w-[384px] absolute -top-40 left-24 xl:-top-10 xl:left-44 2xl:-top-20 2xl:left-60 opacity-100' />
-                    <img src="/assets/Path.svg" alt="" className='w-[150px] xl:w-[100px] 2xl:w-[193px] absolute -top-28 left-14 xl:top-10 xl:left-36 2xl:-top-10 2xl:left-44' />
-                    <img src="/assets/block.png" alt="" className='w-[236px] xl:w-[200px] 2xl:w-[236px] absolute -top-36 left-[250px] xl:-top-10 xl:left-[290px]  2xl:-top-10 2xl:left-[480px] ' style={{ zIndex: '1 ' }} />
-                    <img src="/assets/Combined Shape (1).svg" alt="" className='w-[130px] xl:w-[130px] 2xl:w-[193px] absolute -top-40 left-[340px]  xl:-top-[60px] xl:left-[360px]  2xl:-top-20 2xl:left-[550px]' />
+                    <img src="/assets/Rectangle.svg" alt="" className='w-[310px] xl:w-[250px] 2xl:w-[384px] absolute -top-24 left-24 xl:-top-10 xl:left-44 2xl:-top-20 2xl:left-60 opacity-100' />
+                    <img src="/assets/Path.svg" alt="" className='w-[150px] xl:w-[100px] 2xl:w-[193px] absolute -top-16 left-14 xl:top-10 xl:left-36 2xl:-top-10 2xl:left-44' />
+                    <img src="/assets/block.png" alt="" className='w-[236px] xl:w-[200px] 2xl:w-[236px] absolute -top-24 left-[250px] xl:-top-10 xl:left-[290px]  2xl:-top-10 2xl:left-[480px] ' style={{ zIndex: '1 ' }} />
+                    <img src="/assets/Combined Shape (1).svg" alt="" className='w-[130px] xl:w-[130px] 2xl:w-[193px] absolute -top-28 left-[340px]  xl:-top-[60px] xl:left-[360px]  2xl:-top-20 2xl:left-[550px]' />
                     <img src="/assets/CompositeLayer.png" alt="" className='w-[160px] xl:w-[120px] 2xl:w-[219px] absolute bottom-[470px] left-[40px] xl:bottom-32 xl:left-[170px] 2xl:-bottom-28 2xl:left-[170px]' style={{ zIndex: '1' }} />
 
                 </div>
@@ -513,7 +513,7 @@ const Content = () => {
                     className='mySwiper'
                 >
 
-                    <SwiperSlide className='ml-10 sm:ml-3 md:ml-7 lg:ml-4 xl:ml-7 2xl:-ml-0 3xl:ml-7'>
+                    <SwiperSlide className='ml-10 sm:ml-3 md:ml-7 lg:ml-4 xl:ml-7 2xl:ml-12 3xl:ml-7'>
                         <div>
                             <div className='flex  items-end justify-center border-1 border-[#3A3C56] w-[270px] h-[272px]'>
                                 <figure>

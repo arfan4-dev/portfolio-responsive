@@ -1,7 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
+import React, { useState } from 'react'
 
 const Content = () => {
+    const [isOpen, setIsOpen] = useState({
+        div1: false,
+        div2: false,
+        div3: false,
+        div4: false
+    });
+
+    const clickOpener = (id) => {
+        setIsOpen(prevState => ({
+            ...prevState,
+            [id]: !prevState[id]
+        }));
+    }
     return (
         <div className='min-h-screen  bg-[#28293E] w-[108%] lg:w-[100%]'>
             <div className='flex flex-col space-y-10 lg:flex-row justify-around items-start  lg:items-center ml-5  lg:ml-0 lg:mr-0  xl:py-20 2xl:py-0 tracking-[1px]'>
@@ -570,30 +583,35 @@ const Content = () => {
 
                         </div>
                         <div className='self-center lg:self-start mt-10 lg:mt-0'>
-                            <div className='w-[380px] h-[350px] lg:w-[570px] lg:h-[273px] text-[14px] lg:text-[16px]  py-5 px-10 bg-[#FFFFFF]'>
-                                <div className='text-[#391400]  flex justify-between items-center py-5  text-[24px]'>
+                            <div className={`cursor-pointer w-[380px] h-[310px] lg:w-[570px] transition-all duration-500 ease-in-out ${isOpen.div1 ? 'h-[100px]' : 'h-[113px]'}  text-[14px] lg:text-[16px]  py-5 px-10 bg-[#FFFFFF]`} onClick={() => clickOpener('div1')}>
+                                <div className='text-[#391400]  flex justify-between items-center   text-[24px]'>
                                     <p>A digital agency is a business</p>
-                                    <img src="/assets/up.png" alt="" className='w-[32px]' />
+                                    {!isOpen.div1 ? <img src="/assets/up.png" alt="" className='w-[32px]' /> : <img src="/assets/down.png" className='w-[32px]' alt="" />
+                                    }
                                 </div>
-                                <div className='space-y-3'>
-                                    <p>Digital marketing efforts, instead of handling in-house. They</p>
-                                    <p>can provide your business with a variety of digital solutions</p>
-                                    <p>to promote your product or service online and help you hit</p>
-                                    <p>your marketing goals and grow your business.</p>
-                                </div>
+                                {
+                                    !isOpen.div1 ? <div className='space-y-3'>
+                                        <p>Digital marketing efforts, instead of handling in-house. They</p>
+                                        <p>can provide your business with a variety of digital solutions</p>
+                                        <p>to promote your product or service online and help you hit</p>
+                                        <p>your marketing goals and grow your business.</p>
+                                    </div> : <div></div>
+                                }
+
+
                             </div>
-                            <div className='w-[380px] lg:w-[570px] self-center lg:self-start h-[113px] flex items-center justify-between p-10 border-1 border-[#F3D1BF]'>
+                            <div onClick={() => clickOpener('div2')} className='cursor-pointer w-[380px] lg:w-[570px] self-center lg:self-start h-[113px] flex items-center justify-between p-10 border-1 border-[#F3D1BF]'>
                                 <p className='text-[24px] text-[#391400]'>Hire to outsource your digital</p>
-                                <img src="/assets/down.png" className='w-[32px]' alt="" />
-                            </div>
-                            <div className='w-[380px]  lg:w-[570px] h-[113px] self-center lg:self-start flex items-center justify-between p-10 border-1 border-[#F3D1BF]'>
+                                {!isOpen.div2 ? <img src="/assets/up.png" alt="" className='w-[32px]' /> : <img src="/assets/down.png" className='w-[32px]' alt="" />
+                                }                              </div>
+                            <div onClick={() => clickOpener('div3')} className='cursor-pointer w-[380px]  lg:w-[570px] h-[113px] self-center lg:self-start flex items-center justify-between p-10 border-1 border-[#F3D1BF]'>
                                 <p className='text-[24px] text-[#391400]'>Marketing efforts</p>
-                                <img src="/assets/down.png" className='w-[32px]' alt="" />
-                            </div>
-                            <div className='w-[380px] lg:w-[570px] h-[113px] self-center lg:self-start flex items-center justify-between p-10 border-1 border-[#F3D1BF]'>
+                                {!isOpen.div3 ? <img src="/assets/up.png" alt="" className='w-[32px]' /> : <img src="/assets/down.png" className='w-[32px]' alt="" />
+                                }                              </div>
+                            <div onClick={() => clickOpener('div4')} className='cursor-pointer w-[380px] lg:w-[570px] h-[113px] self-center lg:self-start flex items-center justify-between p-10 border-1 border-[#F3D1BF]'>
                                 <p className='text-[24px] text-[#391400]'>Can provide your business</p>
-                                <img src="/assets/down.png" className='w-[32px]' alt="" />
-                            </div>
+                                {!isOpen.div4 ? <img src="/assets/up.png" alt="" className='w-[32px]' /> : <img src="/assets/down.png" className='w-[32px]' alt="" />
+                                }                              </div>
                         </div>
                     </div>
                     <div className='grid grid-cols-2 grid-rows-2 justify-items-center place-items-center gap-12 lg:flex lg:items-center lg:justify-around mt-20 lg:mt-10 2xl:mt-32'>
@@ -681,7 +699,7 @@ const Content = () => {
 
                 </div>
 
-                <div className='relative bg-[#28293E] h-[1200px] xl:h-[450px] 2xl:h-[465px] '>
+                <div className='relative bg-[#28293E] h-[1200px] xl:h-[450px] 2xl:h-[465px] mt-16 lg:mt-14 '>
                     <div className='absolute -top-16 -left-[14px] xl:-top-14 xl:left-[90px] 2xl:-top-14 2xl:left-[160px]'>
 
 
@@ -871,7 +889,7 @@ const Content = () => {
 
 
 
-        </div>
+        </div >
     )
 }
 

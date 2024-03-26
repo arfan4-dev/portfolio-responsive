@@ -1,7 +1,10 @@
 import Head from "next/head";
 import { primaryFont } from "../lib/fonts";
 import { SITE_TITLE } from "@/lib/constants";
+// import Navbar from "./Home-4/Navbar";
+// import Content from "./Home-4/Content";
 // import Navbar from "@/components/common/Home-7/Navbar";
+// import Content from "@/components/common/Home-7/Content";
 // import Navbar from "@/components/common/Home-12/Navbar";
 // import Content from "@/components/common/Home-12/Content";
 // import Navbar from "@/components/common/Home-11/Navbar";
@@ -12,14 +15,11 @@ import { SITE_TITLE } from "@/lib/constants";
 // import Content from "@/components/common/Home-9/Content";
 // import Navbar from "@/components/common/Home-8/Navbar";
 // import Content from "@/components/common/Home-8/Content";
-// import Navbar fro@/components/common/Home-8/Navbarbar";
-// import Content fro@/components/common/Home-8/Contentent";
+
 // import Navbar from "@/components/common/Home-6/Navbar";
 // import Content from "@/components/common/Home-6/Content";
 // import Navbar from "@/components/common/Home-5/Navbar";
 // import Content from "@/components/common/Home-5/Content";
-// import Navbar from "@/components/common/Home-4/Navbar";
-// import Content from "@/components/common/Home-4/Content";
 import Navbar from "@/components/common/Home-1/Nabar";
 import Content from "@/components/common/Home-1/Content";
 // import Navbar from '../components/common/Home-2/Navbar'
@@ -27,6 +27,7 @@ import Content from "@/components/common/Home-1/Content";
 // import NavbarThree from '@/components/common/Home-3/Navbar-3'
 // import ContentThree from '@/components/common/Home-3/Content-3'
 export default function Home() {
+
 
 
   return (
@@ -41,35 +42,35 @@ export default function Home() {
 
 
         {/* Home-2 */}
-        {/* <Navbar /> */}
-        {/* <ContentTwo /> */}
+        {/* <Navbar />
+        <ContentTwo /> */}
 
 
         {/* Home-3 */}
 
-        {/* <NavbarThree /> */}
-        {/* <ContentThree /> */}
+        {/* <NavbarThree />
+        <ContentThree /> */}
 
 
         {/* Home-4 */}
 
-        {/* <Navbar /> */}
-        {/* <Content /> */}
+        {/* <Navbar />
+        <Content /> */}
 
         {/* Home-5 */}
 
-        {/* <Navbar /> */}
-        {/* <Content /> */}
+        {/* <Navbar />
+        <Content /> */}
 
 
         {/* Home-6 */}
-        {/* <Navbar /> */}
-        {/*  <Content /> */}
+        {/* <Navbar />
+        <Content /> */}
 
         {/* Home-7 */}
 
-        {/* <Navbar /> */}
-        {/*  <Content /> */}
+        {/* <Navbar />
+        <Content /> */}
 
         {/* Home-8 */}
 
@@ -78,8 +79,8 @@ export default function Home() {
 
         {/* Home-9 */}
 
-        {/* <Navbar /> */}
-        {/*<Content /> */}
+        {/* <Navbar />
+        <Content /> */}
 
         {/* Home-10 */}
         {/* <Navbar />

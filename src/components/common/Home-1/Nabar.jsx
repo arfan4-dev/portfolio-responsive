@@ -30,8 +30,10 @@ const Navbar = ({ brand }) => {
                     open={isOpen}
                     onClose={toggleDrawer}
                     direction='right'
-                    className=''
+                    className='bg-[#28293E]'
                     lockBackgroundScroll={true}
+                    style={{ height: '100%', backgroundColor: '#28293E' }}
+
                 >
                     {isOpen && <div className='bg-[#28293E] min-h-screen p-5'>
                         <figure className='flex items-center space-x-5'>

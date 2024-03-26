@@ -1,7 +1,19 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react'
+import React, { useState } from 'react'
 
 const Content = () => {
+    const [isOpen, setIsOpen] = useState({
+        div1: false,
+        div2: false,
+        div3: false,
+        div4: false
+    });
+    const clickOpener = (id) => {
+        setIsOpen(prevState => ({
+            ...prevState,
+            [id]: !prevState[id]
+        }));
+    }
     return (
         <div className='bg-[#FDF0E9] min-h-screen w-[140%] lg:w-full pt-10 overflow-x-hidden'>
 
@@ -375,29 +387,35 @@ const Content = () => {
 
                         </div>
                         <div className='self-center mt-20 lg:self-start'>
-                            <div className='w-[480px] h-[310px] lg:w-[570px] lg:h-[273px] text-[14px] lg:text-[16px]  py-5 px-10 bg-[#FFFFFF]'>
+                            <div className={`cursor-pointer w-[430px] h-[310px] lg:w-[570px] transition-all duration-500 ease-in-out ${isOpen.div1 ? 'h-[100px]' : 'h-[113px]'}  text-[14px] lg:text-[16px]  py-5 px-10 bg-[#FFFFFF]`} onClick={() => clickOpener('div1')}>
                                 <div className='text-[#391400]  flex justify-between items-center py-5  text-[24px]'>
                                     <p>A digital agency is a business</p>
-                                    <img src="/assets/up.png" alt="" className='w-[32px]' />
+                                    {!isOpen.div1 ? <img src="/assets/up.png" alt="" className='w-[32px]' /> : <img src="/assets/down.png" className='w-[32px]' alt="" />
+                                    }
                                 </div>
-                                <div className='space-y-3'>
-                                    <p>Digital marketing efforts, instead of handling in-house. They</p>
-                                    <p>can provide your business with a variety of digital solutions</p>
-                                    <p>to promote your product or service online and help you hit</p>
-                                    <p>your marketing goals and grow your business.</p>
-                                </div>
+                                {
+                                    !isOpen.div1 ? <div className='space-y-3'>
+                                        <p>Digital marketing efforts, instead of handling in-house. They</p>
+                                        <p>can provide your business with a variety of digital solutions</p>
+                                        <p>to promote your product or service online and help you hit</p>
+                                        <p>your marketing goals and grow your business.</p>
+                                    </div> : <div></div>
+                                }
+
+
                             </div>
-                            <div className='w-[480px] lg:w-[570px] self-center lg:self-start h-[113px] flex items-center justify-between p-10 border-1 border-[#FFFFFF]'>
-                                <p className='text-[24px] text-[#FFFFFF]'>Hire to outsource your digital</p>
-                                <img src="/assets/down.png" className='w-[32px]' alt="" />
-                            </div>
-                            <div className='w-[480px] lg:w-[570px] h-[113px] self-center lg:self-start flex items-center justify-between p-10 border-1 border-[#FFFFFF]'>
-                                <p className='text-[24px] text-[#FFFFFF]'>Marketing efforts</p>
-                                <img src="/assets/down.png" className='w-[32px]' alt="" />
-                            </div>
-                            <div className='w-[480px] lg:w-[570px] h-[113px] self-center lg:self-start flex items-center justify-between p-10 border-1 border-[#FFFFFF]'>
-                                <p className='text-[24px] text-[#FFFFFF]'>Can provide your business</p>
-                                <img src="/assets/down.png" className='w-[32px]' alt="" />
+                            <div onClick={() => clickOpener('div2')} className='w-[430px] lg:w-[570px] cursor-pointer self-center lg:self-start h-[113px] flex items-center justify-between p-10 border-1 border-[#F3D1BF]'>
+                                <p className='text-[24px] text-[#ffff]'>Hire to outsource your digital</p>
+                                {!isOpen.div2 ? <img src="/assets/up.png" alt="" className='w-[32px]' /> : <img src="/assets/down.png" className='w-[32px]' alt="" />
+                                }                        </div>
+                            <div onClick={() => clickOpener('div3')} className='w-[430px] lg:w-[570px] h-[113px] cursor-pointer self-center lg:self-start flex items-center justify-between p-10 border-1 border-[#F3D1BF]'>
+                                <p className='text-[24px] text-[#ffff]'>Marketing efforts</p>
+                                {!isOpen.div3 ? <img src="/assets/up.png" alt="" className='w-[32px]' /> : <img src="/assets/down.png" className='w-[32px]' alt="" />
+                                }                        </div>
+                            <div onClick={() => clickOpener('div4')} className='w-[430px] lg:w-[570px] h-[113px] cursor-pointer self-center lg:self-start flex items-center justify-between p-10 border-1 border-[#F3D1BF]'>
+                                <p className='text-[24px] text-[#ffff]'>Can provide your business</p>
+                                {!isOpen.div4 ? <img src="/assets/up.png" alt="" className='w-[32px]' /> : <img src="/assets/down.png" className='w-[32px]' alt="" />
+                                }
                             </div>
                         </div>
 

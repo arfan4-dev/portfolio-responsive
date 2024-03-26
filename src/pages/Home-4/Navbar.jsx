@@ -29,6 +29,8 @@ const Navbar = () => {
                     direction='right'
                     className=''
                     lockBackgroundScroll={true}
+                    style={{ height: '100%', backgroundColor: '#28293E' }}
+
                 >
                     {isOpen && <div className='bg-[#28293E] min-h-screen p-5'>
                         <Link href='/'>

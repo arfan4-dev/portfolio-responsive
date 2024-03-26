@@ -21,8 +21,8 @@ const Content = () => {
 
             <div className='flex flex-col justify-center items-center mt-10 lg:mt-0'>
                 <div className=' w-[86%]   text-[14px] lg:text-[16px]  py-14 '>
-                    <div className='text-[#391400] border-1 border-r-0 border-l-0 border-[#391400] flex justify-between items-center py-5  text-[56px]'>
-                        <div className='flex space-x-5'>
+                    <div className='text-[#391400] border-1 border-r-0 border-l-0 border-[#391400] flex justify-between items-center py-5 text-[30px] lg:text-[56px]'>
+                        <div className='flex items-center space-x-5'>
                             <img src="/assets/CompositeLayer (5).png" alt="" className='w-[80px]' />
                             <p>Design</p>
                         </div>
@@ -50,7 +50,7 @@ const Content = () => {
                     </div>
                 </div>
                 <div className=' w-[86%]   text-[14px] lg:text-[16px]  py-14 '>
-                    <div className='text-[#391400] border-1 border-r-0 border-l-0 border-[#391400] flex justify-between items-center py-5 text-[40px] lg:text-[56px]'>
+                    <div className='text-[#391400] border-1 border-r-0 border-l-0 border-[#391400] flex justify-between items-center py-5 text-[28px] lg:text-[56px]'>
                         <div className='flex items-center lg:items-start space-x-5'>
                             <img src="/assets/CompositeLayer (6).png" alt="" className='w-[80px]' />
                             <p>Development</p>
@@ -60,7 +60,7 @@ const Content = () => {
 
                 </div>
                 <div className=' w-[86%]   text-[14px] lg:text-[16px]  py-14 '>
-                    <div className='text-[#391400] border-1 border-r-0 border-l-0 border-[#391400] flex justify-between items-center py-5  text-[40px] lg:text-[56px]'>
+                    <div className='text-[#391400] border-1 border-r-0 border-l-0 border-[#391400] flex justify-between items-center py-5  text-[28px] lg:text-[56px]'>
                         <div className='flex items-center lg:items-start space-x-5'>
                             <img src="/assets/CompositeLayer (7).png" alt="" className='w-[80px]' />
                             <p>Marketing</p>
@@ -111,7 +111,7 @@ const Content = () => {
                 <div className='relative  flex justify-center items-center mt-10 '>
                     <div className='bg-[#EF6D58] xl:h-[500px] 2xl:h-[600px] w-[90%] ml-0 lg:ml-0  lg:h-[442px] flex flex-col-reverse lg:flex-row items-center justify-around py-20 lg:py-0'>
 
-                        <div className=' space-y-10 mt-10 lg:mt-0'>
+                        <div className=' space-y-10 mt-10 lg:mt-0 p-5 lg:p-0'>
                             <div className=' text-[40px] 2xl:text-[56px] text-[#ffff]'>
                                 <p> Help To Build</p>
                                 <p> Your Dream Project</p>

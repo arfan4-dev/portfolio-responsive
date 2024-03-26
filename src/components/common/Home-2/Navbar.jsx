@@ -29,6 +29,8 @@ const HomeTwo = () => {
                     onClose={toggleDrawer}
                     direction='right'
                     className=''
+                    style={{ height: '100%', backgroundColor: '#28293E' }}
+
                     lockBackgroundScroll={true}
                 >
                     {isOpen && <div className='bg-[#28293E] min-h-screen p-5'>
